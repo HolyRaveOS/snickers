@@ -33,7 +33,7 @@
 			min-height: 100%;
 			left: 0;
 			bottom: 0;
-			padding: rem(80)0 0 rem(15);
+			padding: rem(95)0 0 rem(15);
 			background-color: $mainColor;
 			z-index: 1;
 			transform: translateX(-100%);
@@ -126,7 +126,7 @@
 
 			.menu-open & {
 				transform: scale(1);
-				top: rem(325);
+				top: rem(340);
 				flex-direction: row-reverse;
 				right: 0;
 				justify-content: start;

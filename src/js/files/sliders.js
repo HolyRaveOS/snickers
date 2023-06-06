@@ -7,7 +7,7 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Pagination } from 'swiper';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -19,30 +19,30 @@ EffectFade, Lazy, Manipulation
 // Базові стилі
 import "../../scss/base/swiper.scss";
 // Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+//import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
-// import 'swiper/css';
+//import 'swiper/css';
 
 // Ініціалізація слайдерів
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.hero__cards')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+		new Swiper('.hero__cards', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
+			slidesPerView: 'auto',
+			spaceBetween: 50,
+			// autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
@@ -56,12 +56,12 @@ function initSliders() {
 			*/
 
 			// Пагінація
-			/*
+
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.hero__cards-pagination',
 				clickable: true,
 			},
-			*/
+
 
 			// Скроллбар
 			/*
@@ -72,10 +72,10 @@ function initSliders() {
 			*/
 
 			// Кнопки "вліво/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
 			/*
 			// Брейкпоінти
 			breakpoints: {

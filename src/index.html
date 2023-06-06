@@ -8,6 +8,36 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
+			<section class="hero" style="background-image: url('@img/hero-img/bg.jpg');">
+				<div class="hero__container">
+					<div class="hero__img">
+						<img class="hero__img-cloud" src="@img/hero-img/cloud.png" alt="Зголоднів?">
+						<img src="@img/hero-img/snickers-big.png" alt="Снікерс у ковбойській шляпі">
+					</div>
+					<div class="hero__content">
+						<h1 class="hero__title title-big">
+							Можливо, тобі просто потрібен <span>Snickers</span>
+						</h1>
+						<a class="hero__link btn" href="#">
+							Продукція
+						</a>
+						<div class="hero__cards swiper">
+							<div class="hero__cards-wrapper swiper-wrapper">
+								<a href="#" class="hero__cards-link hero__cards-link_mb swiper-slide">
+									<img src="@img/hero-img/mini-snickers.png" alt="mini-snickers">
+								</a>
+								<a href="#" class="hero__cards-link swiper-slide">
+									<img src="@img/hero-img/snickers.png" alt="snickers">
+								</a>
+								<a href="#" class="hero__cards-link hero__cards-link_mb swiper-slide">
+									<img src="@img/hero-img/snickers-super.png" alt="snickers-super+1">
+								</a>
+							</div>
+							<div class="hero__cards-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
