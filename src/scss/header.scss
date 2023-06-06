@@ -30,17 +30,16 @@
 		@media (max-width:$mobile) {
 			position: fixed;
 			width: 100%;
-			min-height: 100%;
-			left: 0;
-			bottom: 0;
+			height: 100%;
+			left: -100%;
+			top: 0;
 			padding: rem(95)0 0 rem(15);
 			background-color: $mainColor;
 			z-index: 1;
-			transform: translateX(-100%);
 			transition: all 0.3s;
 
 			.menu-open & {
-				transform: translateX(0);
+				left: 0;
 			}
 		}
 	}
