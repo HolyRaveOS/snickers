@@ -89,8 +89,6 @@
 	}
 
 	&__title {
-		text-align: center;
-
 		@media (max-width:$pc) {
 			max-width: rem(480);
 			width: 100%;
@@ -227,14 +225,8 @@
 
 //==================================================================================
 .advantages {
-	@include adaptiveValue("padding-top", 150, 20);
-	@include adaptiveValue("padding-bottom", 150, 40);
-
-	&__container {}
-
-	&__title {
-		margin-bottom: rem(20);
-	}
+	@include adaptiveValue("padding-top", 150, 25);
+	@include adaptiveValue("padding-bottom", 150, 50);
 
 	&__text {
 		margin-bottom: rem(40);
@@ -298,13 +290,16 @@
 
 	&__container {
 		position: relative;
-		@include adaptiveValue("padding-top", 60, 40);
-		@include adaptiveValue("padding-bottom", 60, 40);
+		@include adaptiveValue("padding-top", 60, 50);
+		@include adaptiveValue("padding-bottom", 60, 50);
 	}
 
 	&__title,
 	&__text {
 		color: $whiteColor;
+	}
+
+	&__text {
 		margin-bottom: rem(20);
 	}
 
@@ -433,13 +428,8 @@
 
 //==================================================================================
 .hit {
-	@include adaptiveValue("padding-top", 150, 40);
-	@include adaptiveValue("padding-bottom", 75, 20);
-
-	&__title {
-		margin-bottom: rem(20);
-		text-align: center;
-	}
+	@include adaptiveValue("padding-top", 150, 50);
+	@include adaptiveValue("padding-bottom", 75, 25);
 
 	&__text {
 		margin-bottom: rem(40);
@@ -561,29 +551,6 @@
 		margin: 0 auto;
 	}
 
-	&__scrollbar {
-		height: rem(4);
-		width: rem(280);
-		border: 1px solid $blueColor;
-		border-radius: 20px;
-		margin: 0 auto;
-		display: flex;
-		margin-bottom: rem(10);
-
-		.swiper-scrollbar-drag {
-			&::after {
-				content: '';
-				background-color: $redColor;
-				height: rem(8);
-				width: 100%;
-				border-radius: 20px;
-				position: absolute;
-				top: rem(-3);
-				left: rem(-1);
-			}
-		}
-	}
-
 	.swiper {
 		overflow: visible;
 
@@ -595,13 +562,8 @@
 
 //===============================================================================
 .choose {
-	@include adaptiveValue("padding-top", 75, 20);
-	@include adaptiveValue("padding-bottom", 75, 20);
-
-	&__title {
-		margin-bottom: rem(20);
-		text-align: center;
-	}
+	@include adaptiveValue("padding-top", 75, 25);
+	@include adaptiveValue("padding-bottom", 75, 25);
 
 	&__text {
 		margin-bottom: rem(40);
@@ -727,6 +689,47 @@
 }
 
 //===============================================================================
+.special {
+	@include adaptiveValue("padding-top", 75, 25);
+	@include adaptiveValue("padding-bottom", 75, 25);
+
+	&__text {
+		margin-bottom: rem(40);
+
+		@media (max-width:$mobile) {
+			margin-bottom: rem(30);
+		}
+	}
+
+	&__items {
+		display: flex;
+		gap: rem(20);
+		margin-bottom: rem(40);
+		justify-content: start;
+
+		@media (max-width:$mobileSmall) {
+			gap: rem(0);
+		}
+	}
+
+	&__item {
+		max-width: rem(385);
+		width: 100%;
+
+		@media (max-width:$mobileSmall) {
+			min-width: rem(290);
+		}
+	}
+
+	.swiper {
+		overflow: visible;
+
+		@media (min-width:$mobileSmall) {
+			margin-right: rem(40);
+		}
+	}
+}
+
 //===============================================================================
 //===============================================================================
 //===============================================================================
