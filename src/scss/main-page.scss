@@ -432,11 +432,304 @@
 }
 
 //==================================================================================
-//==================================================================================
-//==================================================================================
-//==================================================================================
-//==================================================================================
-//==================================================================================
-//==================================================================================
-//==================================================================================
-//==================================================================================
+.hit {
+	@include adaptiveValue("padding-top", 150, 40);
+	@include adaptiveValue("padding-bottom", 75, 20);
+
+	&__title {
+		margin-bottom: rem(20);
+		text-align: center;
+	}
+
+	&__text {
+		margin-bottom: rem(40);
+
+		@media (max-width:$mobile) {
+			margin-bottom: rem(30);
+		}
+	}
+
+	&__cards-wrapper {
+		display: flex;
+		gap: rem(20);
+		margin-bottom: rem(40);
+		justify-content: start;
+
+		@media (max-width:$mobileSmall) {
+			gap: rem(0);
+		}
+	}
+
+	&__card {
+		border: 5px solid $mainColor;
+		border-radius: 90px 20px;
+		max-width: rem(377);
+		width: 100%;
+		transition: background-color 0.3s;
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width:$mobileSmall) {
+			min-width: rem(290);
+			margin-left: rem(-4);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+
+				.hit__card-top {
+					background-color: $mainColor;
+				}
+
+				.hit__card-label {
+					border-color: $redColor;
+				}
+
+				.hit__card-title {
+					color: $whiteColor;
+				}
+
+				.hit__card-img {
+					transform: scale(1.25);
+				}
+
+				.hit__card-link {
+					background-color: $blueColor;
+
+					&:active {
+						box-shadow: inset 0 0 0 rem(10) $blueColor;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+
+	&__card-top {
+		background: $blueColor;
+		border-radius: 84px 14px 90px 20px;
+		height: rem(230);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: background-color 0.3s;
+		height: 100%;
+	}
+
+	&__card-label {
+		color: $whiteColor;
+		border: 3px solid $yellowColor;
+		border-radius: rem(20);
+		padding: 0 rem(12);
+		width: fit-content;
+		margin: rem(40) rem(0) rem(0) rem(35);
+		transition: border-color 0.3s;
+	}
+
+	&__card-img {
+		max-width: rem(240);
+		align-self: center;
+		margin-bottom: rem(40);
+		object-fit: contain;
+		transition: transform 0.5s;
+	}
+
+	&__card-bottom {
+		text-align: center;
+		padding: rem(30) rem(10) rem(40) rem(10);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	&__card-title {
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		color: $blackColor;
+		margin-bottom: rem(40);
+		transition: color 0.3s;
+		flex-grow: 1;
+	}
+
+	&__card-link {
+		background-color: $violetColor;
+		color: $whiteColor;
+		transition: all 0.3s;
+		width: fit-content;
+		margin: 0 auto;
+	}
+
+	&__scrollbar {
+		height: rem(4);
+		width: rem(280);
+		border: 1px solid $blueColor;
+		border-radius: 20px;
+		margin: 0 auto;
+		display: flex;
+		margin-bottom: rem(10);
+
+		.swiper-scrollbar-drag {
+			&::after {
+				content: '';
+				background-color: $redColor;
+				height: rem(8);
+				width: 100%;
+				border-radius: 20px;
+				position: absolute;
+				top: rem(-3);
+				left: rem(-1);
+			}
+		}
+	}
+
+	.swiper {
+		overflow: visible;
+
+		@media (min-width:$mobileSmall) {
+			padding-right: rem(30);
+		}
+	}
+}
+
+//===============================================================================
+.choose {
+	@include adaptiveValue("padding-top", 75, 20);
+	@include adaptiveValue("padding-bottom", 75, 20);
+
+	&__title {
+		margin-bottom: rem(20);
+		text-align: center;
+	}
+
+	&__text {
+		margin-bottom: rem(40);
+	}
+
+	&__list {
+		counter-reset: item;
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: rem(20);
+		row-gap: rem(40);
+		padding: 0 80px;
+		justify-content: space-between;
+
+		@media (max-width:$pc) {
+			padding: 0;
+			justify-content: space-evenly
+		}
+
+		@media (max-width:$mobile) {
+			row-gap: rem(20);
+		}
+	}
+
+	&__item {
+		max-width: rem(470);
+		display: flex;
+
+		@media (max-width:$tablet) {
+			flex-direction: column;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.choose__item-image {
+					transform: scale(1.06);
+				}
+
+				.choose__item-text {
+					color: $redColor;
+				}
+			}
+		}
+
+		&::before {
+			content: '';
+			counter-increment: item;
+			content: counter(item);
+			font-weight: 700;
+			font-size: rem(20);
+			border: 1px solid $blackColor;
+			width: rem(30);
+			height: rem(30);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__content {
+		max-width: rem(320);
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		margin-right: rem(30);
+
+		@media (max-width:$mobile) {
+			margin-right: rem(0);
+		}
+	}
+
+	&__item-img {
+		background: linear-gradient(180deg, #501D6E 0%, #9C1AE9 100%);
+		border-radius: 50px 0px;
+		text-align: center;
+	}
+
+	&__item-image {
+		padding: 12px 20px;
+		transition: transform 0.3s
+	}
+
+	&__item-text {
+		transition: color 0.3s;
+	}
+
+	&__checkbox {
+		width: rem(60);
+		height: rem(60);
+		border: 3px solid $blueColor;
+		margin-top: rem(40);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		flex-shrink: 0;
+
+		&[aria-checked] {
+			&::after {
+				content: '';
+				background-image: url('@img/choose/vector.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				width: rem(27);
+				height: rem(25);
+			}
+		}
+	}
+}
+
+.choose-box {
+	display: flex;
+	gap: rem(20);
+	height: fit-content;
+	align-items: start;
+
+	.choose__checkbox {
+		margin: 0;
+	}
+}
+
+//===============================================================================
+//===============================================================================
+//===============================================================================
+//===============================================================================
+//===============================================================================
+//===============================================================================
+//===============================================================================

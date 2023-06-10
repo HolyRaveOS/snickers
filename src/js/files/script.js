@@ -25,5 +25,22 @@ document.addEventListener('click', function (event) {
 });
 
 
+const chooseItems = document.querySelectorAll('.choose__item');
+
+// Add click event listener to each choose__item
+chooseItems.forEach(item => {
+	item.addEventListener('click', () => {
+		// Remove aria-checked attribute from all choose__checkbox elements
+		const checkboxes = document.querySelectorAll('.choose__checkbox');
+		checkboxes.forEach(checkbox => {
+			checkbox.removeAttribute('aria-checked');
+		});
+
+		// Add aria-checked attribute to the clicked choose__checkbox element
+		const checkbox = item.querySelector('.choose__checkbox');
+		checkbox.setAttribute('aria-checked', '');
+	});
+});
+
 
 

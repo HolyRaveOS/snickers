@@ -116,9 +116,124 @@
 					</div>
 				</div>
 			</section>
+			<section class="hit">
+				<div class="hit__container">
+					<h2 class="hit__title title">
+						Обрані смаки, які завжди викликають захоплення
+					</h2>
+					<p class="hit__text text">
+						Переконайтесь самі у своїх улюблених батончиках
+					</p>
+					<div class="hit__cards swiper">
+						<div class="hit__cards-wrapper swiper-wrapper">
+							<div class="hit__card swiper-slide">
+								<div class="hit__card-top">
+									<span class="hit__card-label">Хіт</span>
+									<img class="hit__card-img" src="@img/hit/1.png" alt="Батончик снікерс">
+								</div>
+								<div class="hit__card-bottom">
+									<h3 class="hit__card-title">Батончик SNICKERS®</h3>
+									<a class="hit__card-link btn" href="#">Обери мене</a>
+								</div>
+							</div>
+							<div class="hit__card swiper-slide">
+								<div class="hit__card-top">
+									<span class="hit__card-label">Хіт</span>
+									<img class="hit__card-img" src="@img/hit/2.png" alt="Морозиво снікерс">
+								</div>
+								<div class="hit__card-bottom">
+									<h3 class="hit__card-title">Морозиво SNICKERS®</h3>
+									<a class="hit__card-link btn" href="#">Обери мене</a>
+								</div>
+							</div>
+							<div class="hit__card swiper-slide">
+								<div class="hit__card-top">
+									<span class="hit__card-label">Хіт</span>
+									<img class="hit__card-img" src="@img/hit/3.png" alt="снікерс з крес пастою">
+								</div>
+								<div class="hit__card-bottom">
+									<h3 class="hit__card-title">SNICKERS® з крем-пастою</h3>
+									<a class="hit__card-link btn" href="#">Обери мене</a>
+								</div>
+							</div>
+						</div>
+						<div class="hit__scrollbar"></div>
+					</div>
+				</div>
+			</section>
+			<section class="choose">
+				<div class="choose__container">
+					<h2 class="choose__title title">
+						Що ти обереш сьогодні?
+						Знайди свою солодку радість
+					</h2>
+					<p class="choose__text text">
+						Вишукані і енергетичні смаки у світі батончиків
+					</p>
+					<ul class="choose__list">
+						<li data-popup="#popup" class="choose__item">
+							<div class="choose__content">
+								<div class="choose__item-img">
+									<img class="choose__item-image" src="@img/choose/1.png" alt="Снікерс карамеллю і горіхами">
+								</div>
+								<div class="choose__box1 choose-box">
+									<p class="choose__item-text">
+										Смачну новинку з карамеллю і горіхами,
+										все покрито шоколадом для нового смаку
+									</p>
+								</div>
+							</div>
+							<span data-da=".choose__box1,992,2" class="choose__checkbox"></span>
+						</li>
+						<li data-popup="#popup" class="choose__item">
+							<div class="choose__content">
+								<div class="choose__item-img">
+									<img class="choose__item-image" src="@img/choose/2.png" alt="Снікерс карамеллю і горіхами">
+								</div>
+								<div class="choose__box2 choose-box">
+									<p class="choose__item-text">
+										Міні шоколадні цукерки Snickers покритті
+										молочним шоколадом
+									</p>
+								</div>
+							</div>
+							<span data-da=".choose__box2,992,2" class="choose__checkbox" aria-checked></span>
+						</li>
+						<li data-popup="#popup" class="choose__item">
+							<div class="choose__content">
+								<div class="choose__item-img">
+									<img class="choose__item-image" src="@img/choose/3.png" alt="Снікерс карамеллю і горіхами">
+								</div>
+								<div class="choose__box3 choose-box">
+									<p class="choose__item-text">
+										Молочне морозиво Snickers зі смаженим
+										арахісом та карамеллю
+									</p>
+								</div>
+							</div>
+							<span data-da=".choose__box3,992,2" class="choose__checkbox"></span>
+						</li>
+						<li data-popup="#popup" class="choose__item">
+							<div class="choose__content">
+								<div class="choose__item-img">
+									<img class="choose__item-image" src="@img/choose/4.png" alt="Снікерс карамеллю і горіхами">
+								</div>
+								<div class="choose__box4 choose-box">
+									<p class="choose__item-text">
+										Чи можливо Snickers Super 1, який містить
+										карамель, нугу, обсмажений арахіс
+									</p>
+								</div>
+							</div>
+							<span data-da=".choose__box4,992,2" class="choose__checkbox"></span>
+						</li>
+					</ul>
+				</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
+	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 
