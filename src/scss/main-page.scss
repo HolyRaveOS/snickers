@@ -769,20 +769,26 @@
 
 	&__link {
 		position: relative;
+		display: block;
+
+		svg {
+			position: absolute;
+			top: rem(20);
+			left: rem(20);
+			width: rem(24);
+			height: rem(24);
+		}
 
 		img {
 			object-fit: cover;
 			height: rem(310);
 		}
 
-		&::before {
-			content: '';
-			background-image: url('@img/instagram/instagram.svg');
-			width: rem(24);
-			height: rem(24);
-			position: absolute;
-			left: rem(20);
-			top: rem(20);
+		&:hover {
+			svg {
+				fill: $yellowColor;
+				transform: scale(1.46);
+			}
 		}
 	}
 
