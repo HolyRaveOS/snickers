@@ -1,0 +1,23 @@
+.scrollbar {
+	height: rem(4);
+	width: rem(280);
+	border: 1px solid $blueColor;
+	border-radius: 20px;
+	margin: 0 auto;
+	display: flex;
+	margin-bottom: rem(10);
+	margin-top: rem(40);
+
+	.swiper-scrollbar-drag {
+		&::after {
+			content: '';
+			background-color: $redColor;
+			height: rem(8);
+			width: 100%;
+			border-radius: 20px;
+			position: absolute;
+			top: rem(-3);
+			left: rem(-1);
+		}
+	}
+}

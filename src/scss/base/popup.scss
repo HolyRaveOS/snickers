@@ -65,7 +65,11 @@ body::after {
 }
 
 .popup__img {
-	border-radius: 315px 0px;
+	border-radius: 315px 0;
+
+	@media (max-width:$tablet) {
+		border-radius: 55% 0;
+	}
 }
 
 .popup__close {
