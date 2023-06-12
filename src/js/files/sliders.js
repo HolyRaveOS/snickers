@@ -158,26 +158,26 @@ function initSliders() {
 			// },
 
 			// Брейкпоінти
-			breakpoints: {
-				320: {
-					spaceBetween: 20,
-				},
-				480: {
-					spaceBetween: 0,
-				},
-				640: {
-					spaceBetween: 0,
-				},
-				768: {
-					spaceBetween: 0,
-				},
-				992: {
-					spaceBetween: 0,
-				},
-				1268: {
-					spaceBetween: 0,
-				},
-			},
+			// breakpoints: {
+			// 	320: {
+			// 		spaceBetween: 20,
+			// 	},
+			// 	480: {
+			// 		spaceBetween: 0,
+			// 	},
+			// 	640: {
+			// 		spaceBetween: 0,
+			// 	},
+			// 	768: {
+			// 		spaceBetween: 0,
+			// 	},
+			// 	992: {
+			// 		spaceBetween: 0,
+			// 	},
+			// 	1268: {
+			// 		spaceBetween: 0,
+			// 	},
+			// },
 
 			// Події
 			on: {
@@ -239,26 +239,26 @@ function initSliders() {
 			// },
 
 			// Брейкпоінти
-			breakpoints: {
-				320: {
-					spaceBetween: 20,
-				},
-				480: {
-					spaceBetween: 0,
-				},
-				640: {
-					spaceBetween: 0,
-				},
-				768: {
-					spaceBetween: 0,
-				},
-				992: {
-					spaceBetween: 0,
-				},
-				1268: {
-					spaceBetween: 0,
-				},
-			},
+			// breakpoints: {
+			// 	320: {
+			// 		spaceBetween: 20,
+			// 	},
+			// 	480: {
+			// 		spaceBetween: 0,
+			// 	},
+			// 	640: {
+			// 		spaceBetween: 0,
+			// 	},
+			// 	768: {
+			// 		spaceBetween: 0,
+			// 	},
+			// 	992: {
+			// 		spaceBetween: 0,
+			// 	},
+			// 	1268: {
+			// 		spaceBetween: 0,
+			// 	},
+			// },
 
 			// Події
 			on: {
@@ -280,7 +280,6 @@ function initSliders() {
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 800,
-
 			//touchRatio: 0,
 			//simulateTouch: false,
 			// loop: true,
@@ -319,26 +318,26 @@ function initSliders() {
 			// },
 
 			// Брейкпоінти
-			breakpoints: {
-				320: {
-					spaceBetween: 20,
-				},
-				480: {
-					spaceBetween: 0,
-				},
-				640: {
-					spaceBetween: 0,
-				},
-				768: {
-					spaceBetween: 0,
-				},
-				992: {
-					spaceBetween: 0,
-				},
-				1268: {
-					spaceBetween: 0,
-				},
-			},
+			// breakpoints: {
+			// 	320: {
+			// 		spaceBetween: 20,
+			// 	},
+			// 	480: {
+			// 		spaceBetween: 20,
+			// 	},
+			// 	640: {
+			// 		spaceBetween: 20,
+			// 	},
+			// 	768: {
+			// 		spaceBetween: 20,
+			// 	},
+			// 	992: {
+			// 		spaceBetween: 20,
+			// 	},
+			// 	1268: {
+			// 		spaceBetween: 20,
+			// 	},
+			// },
 
 			// Події
 			on: {

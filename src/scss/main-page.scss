@@ -441,7 +441,6 @@
 
 	&__cards-wrapper {
 		display: flex;
-		gap: rem(20);
 		justify-content: start;
 
 		@media (max-width:$mobileSmall) {
@@ -499,12 +498,13 @@
 	&__card-top {
 		background: $blueColor;
 		border-radius: 84px 14px 90px 20px;
-		height: rem(230);
+		padding: rem(100) rem(0) rem(0) rem(0);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		transition: background-color 0.3s;
 		height: 100%;
+		position: relative;
 	}
 
 	&__card-label {
@@ -513,8 +513,10 @@
 		border-radius: rem(20);
 		padding: 0 rem(12);
 		width: fit-content;
-		margin: rem(40) rem(0) rem(0) rem(35);
+		position: absolute;
 		transition: border-color 0.3s;
+		top: rem(30);
+		left: rem(30);
 	}
 
 	&__card-img {
@@ -551,10 +553,13 @@
 	}
 
 	.swiper {
-		overflow: visible;
+
+		@media (max-width:$pc) {
+			overflow: visible;
+		}
 
 		@media (min-width:$mobileSmall) {
-			padding-right: rem(30);
+			margin-left: rem(-1);
 		}
 	}
 }
@@ -702,7 +707,6 @@
 
 	&__items {
 		display: flex;
-		gap: rem(20);
 		justify-content: start;
 
 		@media (max-width:$mobileSmall) {
@@ -720,10 +724,8 @@
 	}
 
 	.swiper {
-		overflow: visible;
-
-		@media (min-width:$mobileSmall) {
-			margin-right: rem(40);
+		@media (max-width:$pc) {
+			overflow: visible;
 		}
 	}
 }
@@ -745,7 +747,7 @@
 //===============================================================================
 .instagram {
 	@include adaptiveValue("padding-top", 75, 25);
-	@include adaptiveValue("padding-bottom", 75, 25);
+	@include adaptiveValue("padding-bottom", 150, 50);
 
 	&__title {
 		margin-bottom: rem(40);
@@ -753,7 +755,6 @@
 
 	&__list {
 		display: flex;
-		gap: rem(20);
 		justify-content: start;
 
 		@media (max-width:$mobileSmall) {
@@ -793,10 +794,8 @@
 	}
 
 	.swiper {
-		overflow: visible;
-
-		@media (min-width:$mobileSmall) {
-			margin-right: rem(60);
+		@media (max-width:$tablet) {
+			overflow: visible;
 		}
 	}
 }

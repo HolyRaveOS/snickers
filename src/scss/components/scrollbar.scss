@@ -5,10 +5,21 @@
 	border-radius: 20px;
 	margin: 0 auto;
 	display: flex;
-	margin-bottom: rem(10);
+	margin-bottom: rem(22);
 	margin-top: rem(40);
+	cursor: pointer;
 
 	.swiper-scrollbar-drag {
+		&::before {
+			content: '';
+			height: rem(50);
+			width: 100%;
+			border-radius: 20px;
+			position: absolute;
+			top: rem(-25);
+			left: rem(-1);
+		}
+
 		&::after {
 			content: '';
 			background-color: $redColor;
