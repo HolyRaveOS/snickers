@@ -1,0 +1,36 @@
+.breadcrumbs {
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-right: rem(20);
+
+			&::after {
+				content: '';
+				background-image: url('@img/product-page/vector.svg');
+				width: rem(10);
+				height: rem(14);
+				margin-left: rem(20);
+			}
+		}
+	}
+
+	&__link {
+
+		font-weight: 700;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: 24px;
+		color: $whiteColor;
+		opacity: 0.6;
+
+		&_active {
+			opacity: 1;
+		}
+	}
+}

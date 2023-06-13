@@ -35,7 +35,7 @@
 			top: 0;
 			padding: rem(95)0 0 rem(15);
 			background-color: $mainColor;
-			z-index: 1;
+			z-index: 4;
 			transition: all 0.3s;
 
 			.menu-open & {
@@ -96,7 +96,7 @@
 		margin-right: rem(100);
 	}
 
-	&__opnen-btn {
+	&__open-btn {
 		display: flex;
 
 		@media (max-width:$mobileSmall) {
@@ -125,7 +125,7 @@
 
 			.menu-open & {
 				transform: scale(1);
-				top: rem(340);
+				top: rem(355);
 				flex-direction: row-reverse;
 				right: 0;
 				justify-content: start;
