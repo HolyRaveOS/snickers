@@ -1,803 +1,775 @@
 //===============================================================================
 .hero {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-	&__container {
-		display: flex;
-		justify-content: space-between;
-		align-items: end;
-		min-height: calc(100ch - rem(105));
-		gap: rem(20);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    min-height: calc(100ch - rem(105));
+    gap: rem(20);
 
-		@media (max-width:$tablet) {
-			min-height: auto;
-		}
+    @media (max-width: $tablet) {
+      min-height: auto;
+    }
 
-		@media (max-width:$mobileSmall) {
-			flex-direction: column;
-			padding: 0;
-			gap: rem(0);
-		}
-	}
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      padding: 0;
+      gap: rem(0);
+    }
+  }
 
-	&__img {
-		max-width: rem(480);
-		width: 100%;
-		margin-top: auto;
-		position: relative;
+  &__img {
+    max-width: rem(480);
+    width: 100%;
+    margin-top: auto;
+    position: relative;
 
-		img {
-			object-fit: contain;
-		}
+    img {
+      object-fit: contain;
+    }
 
-		@media (max-width:$tablet) {
-			@include adaptiveValue("max-width", 400, 250);
-		}
+    @media (max-width: $tablet) {
+      @include adaptiveValue('max-width', 400, 250);
+    }
 
-		@media (max-width:$mobile) {
-			align-self: flex-start;
-		}
-	}
+    @media (max-width: $mobile) {
+      align-self: flex-start;
+    }
+  }
 
-	&__img-cloud {
-		position: absolute;
-		top: -31%;
-		right: -26%;
+  &__img-cloud {
+    position: absolute;
+    top: -31%;
+    right: -26%;
 
-		@media (max-width:$pc) {
-			right: -17%;
-			top: -26%;
-		}
+    @media (max-width: $pc) {
+      right: -17%;
+      top: -26%;
+    }
 
-		@media (max-width:$tablet) {
-			@include adaptiveValue("max-width", 330, 150);
-		}
+    @media (max-width: $tablet) {
+      @include adaptiveValue('max-width', 330, 150);
+    }
 
-		@media (max-width: em(870)) {
-			top: -10%;
-			left: 40%;
-		}
+    @media (max-width: em(870)) {
+      top: -10%;
+      left: 40%;
+    }
 
-		@media (max-width:$mobile) {
-			right: -17%;
-			top: -10%;
-		}
+    @media (max-width: $mobile) {
+      right: -17%;
+      top: -10%;
+    }
 
-		@media (max-width:$mobileSmall) {
-			top: 0;
-			left: 72%;
-		}
-	}
+    @media (max-width: $mobileSmall) {
+      top: 0;
+      left: 72%;
+    }
+  }
 
-	&__content {
-		max-width: rem(640);
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: rem(28);
-		padding-top: rem(20);
+  &__content {
+    max-width: rem(640);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(28);
+    padding-top: rem(20);
 
-		@media (max-width:$mobileSmall) {
-			background-color: #fff;
-			max-width: 100%;
-			margin: 0;
-			padding: rem(20) rem(15);
-		}
-	}
+    @media (max-width: $mobileSmall) {
+      background-color: #fff;
+      max-width: 100%;
+      margin: 0;
+      padding: rem(20) rem(15);
+    }
+  }
 
-	&__title {
-		@media (max-width:$pc) {
-			max-width: rem(480);
-			width: 100%;
-		}
+  &__title {
+    @media (max-width: $pc) {
+      max-width: rem(480);
+      width: 100%;
+    }
 
-		@media (max-width:$tablet) {
-			font-size: rem(50);
-			@include adaptiveValue("font-size", 50, 36, 1, 992, 480);
-		}
+    @media (max-width: $tablet) {
+      font-size: rem(50);
+      @include adaptiveValue('font-size', 50, 36, 1, 992, 480);
+    }
 
-		&:not(:last-child) {
-			margin-bottom: rem(50);
-			@include adaptiveValue("margin-bottom", 50, 20, 1, 1230, 480);
-		}
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+      @include adaptiveValue('margin-bottom', 50, 20, 1, 1230, 480);
+    }
 
-		@media (max-width:$mobileSmall) {
-			&:not(:last-child) {
-				margin-bottom: rem(30);
-			}
+    @media (max-width: $mobileSmall) {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
 
-			color: $blackColor;
-			text-shadow: none;
+      color: $blackColor;
+      text-shadow: none;
 
-			span {
-				color: $blackColor;
-			}
-		}
+      span {
+        color: $blackColor;
+      }
+    }
 
-		@media (max-width:$mobileSmall) {
-			font-size: rem(36);
-		}
-	}
+    @media (max-width: $mobileSmall) {
+      font-size: rem(36);
+    }
+  }
 
-	&__link {
-		background-color: $yellowColor;
-		transition: all 0.3s;
+  &__link {
+    background-color: $yellowColor;
+    transition: all 0.3s;
 
-		&:hover {
-			background-color: #ffa723;
-		}
+    &:hover {
+      background-color: #ffa723;
+    }
 
-		&:active {
-			box-shadow: inset 0 0 0 rem(10) $yellowColor;
-			background-color: transparent;
-			color: $whiteColor;
-		}
+    &:active {
+      box-shadow: inset 0 0 0 rem(10) $yellowColor;
+      background-color: transparent;
+      color: $whiteColor;
+    }
 
-		&:not(:last-child) {
-			margin-bottom: rem(58);
-			@include adaptiveValue("margin-bottom", 58, 20, 1, 1230, 768);
-		}
+    &:not(:last-child) {
+      margin-bottom: rem(58);
+      @include adaptiveValue('margin-bottom', 58, 20, 1, 1230, 768);
+    }
 
-		@media (max-width:$mobile) {
-			&:not(:last-child) {
-				margin-bottom: rem(0);
-			}
-		}
-	}
+    @media (max-width: $mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(0);
+      }
+    }
+  }
 
-	&__cards {
-		display: flex;
-		max-width: rem(640);
-		width: 100%;
-		border-radius: rem(20);
-		position: relative;
+  &__cards {
+    display: flex;
+    max-width: rem(640);
+    width: 100%;
+    border-radius: rem(20);
+    position: relative;
 
-		@media (max-width:$pc) {
-			max-width: rem(410);
-		}
+    @media (max-width: $pc) {
+      max-width: rem(410);
+    }
 
-		@media (max-width:em(870)) {
-			display: none;
-		}
+    @media (max-width: em(870)) {
+      display: none;
+    }
 
-		&.swiper {
-			@media (min-width:$pc) {
-				padding: rem(40) rem(5) rem(0) rem(5);
-			}
-		}
-	}
+    &.swiper {
+      @media (min-width: $pc) {
+        padding: rem(40) rem(5) rem(0) rem(5);
+      }
+    }
+  }
 
-	&__cards-link {
-		transition: transform 0.3s;
-		max-width: rem(175);
-		width: 100%;
+  &__cards-link {
+    transition: transform 0.3s;
+    max-width: rem(175);
+    width: 100%;
 
-		@media (min-width:$pc) {
-			@media (any-hover: hover) {
-				&:hover {
-					transform: scale(1.04);
-				}
-			}
-		}
+    @media (min-width: $pc) {
+      @media (any-hover: hover) {
+        &:hover {
+          transform: scale(1.04);
+        }
+      }
+    }
 
-		&_mb {
-			@media (min-width:em(1231)) {
-				margin-top: rem(-28);
-			}
-		}
-	}
+    &_mb {
+      @media (min-width: em(1231)) {
+        margin-top: rem(-28);
+      }
+    }
+  }
 
-	&__cards-pagination {
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		position: absolute;
-	}
+  &__cards-pagination {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
 
-	.swiper-pagination-bullets {
-		display: flex;
-		gap: rem(8);
-		align-items: center;
-	}
+  .swiper-pagination-bullets {
+    display: flex;
+    gap: rem(8);
+    align-items: center;
+  }
 
-	.swiper-pagination-bullet {
-		display: none;
+  .swiper-pagination-bullet {
+    display: none;
 
-		@media (max-width:$pc) {
-			display: flex;
-		}
+    @media (max-width: $pc) {
+      display: flex;
+    }
 
-		width: rem(10);
-		height: rem(10);
-		background-color: #fff;
-		border-radius: 50%;
-	}
+    width: rem(10);
+    height: rem(10);
+    background-color: #fff;
+    border-radius: 50%;
+  }
 
-	.swiper-pagination-bullet-active {
-		width: rem(12);
-		height: rem(12);
-		background-color: $yellowColor;
-	}
+  .swiper-pagination-bullet-active {
+    width: rem(12);
+    height: rem(12);
+    background-color: $yellowColor;
+  }
 }
 
 //==================================================================================
 .advantages {
-	@include adaptiveValue("padding-top", 150, 25);
-	@include adaptiveValue("padding-bottom", 150, 50);
+  @include adaptiveValue('padding-top', 150, 25);
+  @include adaptiveValue('padding-bottom', 150, 50);
 
-	&__text {
-		margin-bottom: rem(40);
+  &__text {
+    margin-bottom: rem(40);
 
-		@media (max-width:$mobile) {
-			margin-bottom: rem(30);
-		}
-	}
+    @media (max-width: $mobile) {
+      margin-bottom: rem(30);
+    }
+  }
 
-	&__items {
-		gap: rem(20);
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-	}
+  &__items {
+    gap: rem(20);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-	&__item {
-		border: 5px solid $blueColor;
-		border-radius: rem(50) 0;
-		padding: rem(40) rem(30);
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		max-width: rem(285);
-		width: 100%;
-		transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+  &__item {
+    border: 5px solid $blueColor;
+    border-radius: rem(50) 0;
+    padding: rem(40) rem(30);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: rem(285);
+    width: 100%;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $mainColor;
-				color: $whiteColor;
-				border-color: $mainColor;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $mainColor;
+        color: $whiteColor;
+        border-color: $mainColor;
 
-				.advantages__item-title {
-					color: $whiteColor;
-				}
-			}
-		}
-	}
+        .advantages__item-title {
+          color: $whiteColor;
+        }
+      }
+    }
+  }
 
-	&__item-title {
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 24px;
-		color: $blackColor;
-		margin-bottom: rem(10);
-		flex-grow: 1;
-		transition: color 0.3s;
-	}
+  &__item-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $blackColor;
+    margin-bottom: rem(10);
+    flex-grow: 1;
+    transition: color 0.3s;
+  }
 
-	&__item-text {
-		font-size: rem(14);
-	}
+  &__item-text {
+    font-size: rem(14);
+  }
 }
 
 //==================================================================================
 .novelty {
-	background-repeat: no-repeat;
-	background-position: bottom center;
-	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
 
-	&__container {
-		position: relative;
-		@include adaptiveValue("padding-top", 60, 50);
-		@include adaptiveValue("padding-bottom", 60, 50);
-	}
+  &__container {
+    position: relative;
+    @include adaptiveValue('padding-top', 60, 50);
+    @include adaptiveValue('padding-bottom', 60, 50);
+  }
 
-	&__title,
-	&__text {
-		color: $whiteColor;
-	}
+  &__title,
+  &__text {
+    color: $whiteColor;
+  }
 
-	&__text {
-		margin-bottom: rem(20);
-	}
+  &__text {
+    margin-bottom: rem(20);
+  }
 
-	&__images {
-		display: flex;
-		padding: 0 rem(70);
-		align-items: center;
-		margin-bottom: rem(20);
+  &__images {
+    display: flex;
+    padding: 0 rem(70);
+    align-items: center;
+    margin-bottom: rem(20);
 
-		@media (max-width:$pc) {
-			padding: 0;
-			justify-content: center;
-		}
-	}
+    @media (max-width: $pc) {
+      padding: 0;
+      justify-content: center;
+    }
+  }
 
-	&__image {
-		position: relative;
+  &__image {
+    position: relative;
 
-		img {
-			object-fit: contain;
-		}
+    img {
+      object-fit: contain;
+    }
 
-		transition:cubic-bezier(0.18, 0.89, 0.08, 1.47) 2s;
+    transition: cubic-bezier(0.18, 0.89, 0.08, 1.47) 2s;
 
-		@media (any-hover: hover) {
-			&:hover {
-				transform: scale(1.03);
-			}
-		}
-	}
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
 
-	&__img-left {
-		transform: translateX(5%);
-		min-width: rem(580);
-		@include adaptiveValue("min-width", 580, 205);
+  &__img-left {
+    transform: translateX(5%);
+    min-width: rem(580);
+    @include adaptiveValue('min-width', 580, 205);
 
-		@media (max-width:$mobile) {
-			transform: translateX(10%);
-		}
+    @media (max-width: $mobile) {
+      transform: translateX(10%);
+    }
 
-		@media (max-width:$mobileSmall) {
-			transform: translateX(15%);
-		}
-	}
+    @media (max-width: $mobileSmall) {
+      transform: translateX(15%);
+    }
+  }
 
-	&__img-right {
-		transform: translateX(-5%);
-		min-width: rem(470);
-		margin-top: 25%;
-		@include adaptiveValue("min-width", 470, 175);
+  &__img-right {
+    transform: translateX(-5%);
+    min-width: rem(470);
+    margin-top: 25%;
+    @include adaptiveValue('min-width', 470, 175);
 
-		@media (max-width:$mobile) {
-			transform: translateX(-10%);
-		}
+    @media (max-width: $mobile) {
+      transform: translateX(-10%);
+    }
 
-		@media (max-width:$mobileSmall) {
-			transform: translateX(-15%);
-		}
-	}
+    @media (max-width: $mobileSmall) {
+      transform: translateX(-15%);
+    }
+  }
 
-	&__link {
-		background-color: $blueColor;
-		color: $whiteColor;
-		display: block;
-		margin: 0 auto;
-		width: fit-content;
-		z-index: 1;
-		position: relative;
-		transition: all 0.3s;
+  &__link {
+    background-color: $blueColor;
+    color: $whiteColor;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    z-index: 1;
+    position: relative;
+    transition: all 0.3s;
 
-		&:hover {
-			&:hover {
-				background-color: #1a0066;
-			}
+    &:hover {
+      &:hover {
+        background-color: #1a0066;
+      }
 
-			&:active {
-				box-shadow: inset 0 0 0 rem(10) $blueColor;
-				background-color: transparent;
-				color: $whiteColor;
-			}
-		}
-	}
+      &:active {
+        box-shadow: inset 0 0 0 rem(10) $blueColor;
+        background-color: transparent;
+        color: $whiteColor;
+      }
+    }
+  }
 
-	&__info {
-		position: absolute;
-		right: 0;
-		bottom: rem(0);
-		@include adaptiveValue("max-width", 215, 150, 1, 1230, 768);
-		height: rem(210);
+  &__info {
+    position: absolute;
+    right: 0;
+    bottom: rem(0);
+    @include adaptiveValue('max-width', 215, 150, 1, 1230, 768);
+    height: rem(210);
 
-		@media (max-width:$mobile) {
-			display: none;
-		}
-	}
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
 
-	&__info-box {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  &__info-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	&__info-img {
-		img {
-			object-fit: contain;
-		}
-	}
+  &__info-img {
+    img {
+      object-fit: contain;
+    }
+  }
 
-	&__info-text {
-		width: 100%;
-		display: inline-block;
-		font-weight: 700;
-		max-width: rem(125);
-		font-size: rem(20);
-		@include adaptiveValue("font-size", 20, 12, 1, 1230, 768);
-		@include adaptiveValue("max-width", 125, 80, 1, 1230, 768);
-		line-height: math.div(24, 20);
-		position: absolute;
-		padding-left: rem(8);
-		display: -webkit-box;
-		-webkit-line-clamp: 6;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
+  &__info-text {
+    width: 100%;
+    display: inline-block;
+    font-weight: 700;
+    max-width: rem(125);
+    font-size: rem(20);
+    @include adaptiveValue('font-size', 20, 12, 1, 1230, 768);
+    @include adaptiveValue('max-width', 125, 80, 1, 1230, 768);
+    line-height: math.div(24, 20);
+    position: absolute;
+    padding-left: rem(8);
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 //==================================================================================
 .hit {
-	@include adaptiveValue("padding-top", 150, 50);
-	@include adaptiveValue("padding-bottom", 75, 25);
+  @include adaptiveValue('padding-top', 150, 50);
+  @include adaptiveValue('padding-bottom', 75, 25);
 
-	&__text {
-		margin-bottom: rem(40);
+  &__text {
+    margin-bottom: rem(40);
 
-		@media (max-width:$mobile) {
-			margin-bottom: rem(30);
-		}
-	}
+    @media (max-width: $mobile) {
+      margin-bottom: rem(30);
+    }
+  }
 
-	&__cards-wrapper {
-		display: flex;
-		justify-content: start;
+  &__card {
+    border: 5px solid $mainColor;
+    border-radius: 90px 20px;
+    max-width: rem(377);
+    width: 100%;
+    transition: background-color 0.3s;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 
-		@media (max-width:$mobileSmall) {
-			gap: rem(0);
-		}
-	}
+    @media (max-width: $mobileSmall) {
+      min-width: rem(290);
+      margin-left: rem(-4);
+    }
 
-	&__card {
-		border: 5px solid $mainColor;
-		border-radius: 90px 20px;
-		max-width: rem(377);
-		width: 100%;
-		transition: background-color 0.3s;
-		min-height: 100%;
-		display: flex;
-		flex-direction: column;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $mainColor;
 
-		@media (max-width:$mobileSmall) {
-			min-width: rem(290);
-			margin-left: rem(-4);
-		}
+        .hit__card-top {
+          background-color: $mainColor;
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $mainColor;
+        .hit__card-label {
+          border-color: $redColor;
+        }
 
-				.hit__card-top {
-					background-color: $mainColor;
-				}
+        .hit__card-title {
+          color: $whiteColor;
+        }
 
-				.hit__card-label {
-					border-color: $redColor;
-				}
+        .hit__card-img {
+          transform: scale(1.25);
+        }
 
-				.hit__card-title {
-					color: $whiteColor;
-				}
+        .hit__card-link {
+          background-color: $blueColor;
 
-				.hit__card-img {
-					transform: scale(1.25);
-				}
+          &:active {
+            box-shadow: inset 0 0 0 rem(10) $blueColor;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
 
-				.hit__card-link {
-					background-color: $blueColor;
+  &__card-top {
+    background: $blueColor;
+    border-radius: 84px 14px 90px 20px;
+    padding: rem(100) rem(0) rem(0) rem(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+    height: 100%;
+    position: relative;
+  }
 
-					&:active {
-						box-shadow: inset 0 0 0 rem(10) $blueColor;
-						background-color: transparent;
-					}
-				}
-			}
-		}
-	}
+  &__card-label {
+    color: $whiteColor;
+    border: 3px solid $yellowColor;
+    border-radius: rem(20);
+    padding: 0 rem(12);
+    width: fit-content;
+    position: absolute;
+    transition: border-color 0.3s;
+    top: rem(30);
+    left: rem(30);
+  }
 
-	&__card-top {
-		background: $blueColor;
-		border-radius: 84px 14px 90px 20px;
-		padding: rem(100) rem(0) rem(0) rem(0);
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		transition: background-color 0.3s;
-		height: 100%;
-		position: relative;
-	}
+  &__card-img {
+    max-width: rem(240);
+    align-self: center;
+    margin-bottom: rem(40);
+    object-fit: contain;
+    transition: transform 0.5s;
+  }
 
-	&__card-label {
-		color: $whiteColor;
-		border: 3px solid $yellowColor;
-		border-radius: rem(20);
-		padding: 0 rem(12);
-		width: fit-content;
-		position: absolute;
-		transition: border-color 0.3s;
-		top: rem(30);
-		left: rem(30);
-	}
+  &__card-bottom {
+    text-align: center;
+    padding: rem(30) rem(10) rem(40) rem(10);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-	&__card-img {
-		max-width: rem(240);
-		align-self: center;
-		margin-bottom: rem(40);
-		object-fit: contain;
-		transition: transform 0.5s;
-	}
+  &__card-title {
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    color: $blackColor;
+    margin-bottom: rem(40);
+    transition: color 0.3s;
+    flex-grow: 1;
+  }
 
-	&__card-bottom {
-		text-align: center;
-		padding: rem(30) rem(10) rem(40) rem(10);
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
+  &__card-link {
+    background-color: $violetColor;
+    color: $whiteColor;
+    transition: all 0.3s;
+    width: fit-content;
+    margin: 0 auto;
+  }
 
-	&__card-title {
-		font-size: rem(20);
-		line-height: math.div(24, 20);
-		color: $blackColor;
-		margin-bottom: rem(40);
-		transition: color 0.3s;
-		flex-grow: 1;
-	}
+  .swiper {
+    @media (max-width: $pc) {
+      overflow: visible;
+    }
 
-	&__card-link {
-		background-color: $violetColor;
-		color: $whiteColor;
-		transition: all 0.3s;
-		width: fit-content;
-		margin: 0 auto;
-	}
-
-	.swiper {
-
-		@media (max-width:$pc) {
-			overflow: visible;
-		}
-
-		@media (min-width:$mobileSmall) {
-			margin-left: rem(-1);
-		}
-	}
+    @media (min-width: $mobileSmall) {
+      margin-left: rem(-1);
+    }
+  }
 }
 
 //===============================================================================
 .choose {
-	@include adaptiveValue("padding-top", 75, 25);
-	@include adaptiveValue("padding-bottom", 75, 25);
+  @include adaptiveValue('padding-top', 75, 25);
+  @include adaptiveValue('padding-bottom', 75, 25);
 
-	&__text {
-		margin-bottom: rem(40);
-	}
+  &__text {
+    margin-bottom: rem(40);
+  }
 
-	&__list {
-		counter-reset: item;
-		display: flex;
-		flex-wrap: wrap;
-		column-gap: rem(20);
-		row-gap: rem(40);
-		padding: 0 80px;
-		justify-content: space-between;
+  &__list {
+    counter-reset: item;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(20);
+    row-gap: rem(40);
+    padding: 0 80px;
+    justify-content: space-between;
 
-		@media (max-width:$pc) {
-			padding: 0;
-			justify-content: space-evenly
-		}
+    @media (max-width: $pc) {
+      padding: 0;
+      justify-content: space-evenly;
+    }
 
-		@media (max-width:$mobile) {
-			row-gap: rem(20);
-		}
-	}
+    @media (max-width: $mobile) {
+      row-gap: rem(20);
+    }
+  }
 
-	&__item {
-		max-width: rem(470);
-		display: flex;
+  &__item {
+    max-width: rem(470);
+    display: flex;
 
-		@media (max-width:$tablet) {
-			flex-direction: column;
-		}
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
 
-		@media (any-hover: hover) {
-			&:hover {
-				.choose__item-image {
-					transform: scale(1.06);
-				}
+    @media (any-hover: hover) {
+      &:hover {
+        .choose__item-image {
+          transform: scale(1.06);
+        }
 
-				.choose__item-text {
-					color: $redColor;
-				}
-			}
-		}
+        .choose__item-text {
+          color: $redColor;
+        }
+      }
+    }
 
-		&::before {
-			content: '';
-			counter-increment: item;
-			content: counter(item);
-			font-weight: 700;
-			font-size: rem(20);
-			border: 1px solid $blackColor;
-			width: rem(30);
-			height: rem(30);
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-	}
+    &::before {
+      content: '';
+      counter-increment: item;
+      content: counter(item);
+      font-weight: 700;
+      font-size: rem(20);
+      border: 1px solid $blackColor;
+      width: rem(30);
+      height: rem(30);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
-	&__content {
-		max-width: rem(320);
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: rem(10);
-		margin-right: rem(30);
+  &__content {
+    max-width: rem(320);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    margin-right: rem(30);
 
-		@media (max-width:$mobile) {
-			margin-right: rem(0);
-		}
-	}
+    @media (max-width: $mobile) {
+      margin-right: rem(0);
+    }
+  }
 
-	&__item-img {
-		background: linear-gradient(180deg, #501D6E 0%, #9C1AE9 100%);
-		border-radius: 50px 0px;
-		text-align: center;
-	}
+  &__item-img {
+    background: linear-gradient(180deg, #501d6e 0%, #9c1ae9 100%);
+    border-radius: 50px 0px;
+    text-align: center;
+  }
 
-	&__item-image {
-		padding: 12px 20px;
-		transition: transform 0.3s
-	}
+  &__item-image {
+    padding: 12px 20px;
+    transition: transform 0.3s;
+  }
 
-	&__item-text {
-		transition: color 0.3s;
-	}
+  &__item-text {
+    transition: color 0.3s;
+  }
 
-	&__checkbox {
-		width: rem(60);
-		height: rem(60);
-		border: 3px solid $blueColor;
-		margin-top: rem(40);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-		flex-shrink: 0;
+  &__checkbox {
+    width: rem(60);
+    height: rem(60);
+    border: 3px solid $blueColor;
+    margin-top: rem(40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
 
-		&[aria-checked] {
-			&::after {
-				content: '';
-				background-image: url('@img/choose/vector.svg');
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: contain;
-				width: rem(27);
-				height: rem(25);
-			}
-		}
-	}
+    &[aria-checked] {
+      &::after {
+        content: '';
+        background-image: url('@img/choose/vector.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: rem(27);
+        height: rem(25);
+      }
+    }
+  }
 }
 
 .choose-box {
-	display: flex;
-	gap: rem(20);
-	height: fit-content;
-	align-items: start;
+  display: flex;
+  gap: rem(20);
+  height: fit-content;
+  align-items: start;
 
-	.choose__checkbox {
-		margin: 0;
-	}
+  .choose__checkbox {
+    margin: 0;
+  }
 }
 
 //===============================================================================
 .special {
-	@include adaptiveValue("padding-top", 75, 25);
-	@include adaptiveValue("padding-bottom", 75, 25);
+  @include adaptiveValue('padding-top', 75, 25);
+  @include adaptiveValue('padding-bottom', 75, 25);
 
-	&__text {
-		margin-bottom: rem(40);
+  &__text {
+    margin-bottom: rem(40);
 
-		@media (max-width:$mobile) {
-			margin-bottom: rem(30);
-		}
-	}
+    @media (max-width: $mobile) {
+      margin-bottom: rem(30);
+    }
+  }
 
-	&__items {
-		display: flex;
-		justify-content: start;
+  &__item {
+    max-width: rem(385);
+    width: 100%;
 
-		@media (max-width:$mobileSmall) {
-			gap: rem(0);
-		}
-	}
+    @media (max-width: $mobileSmall) {
+      min-width: rem(290);
+    }
+  }
 
-	&__item {
-		max-width: rem(385);
-		width: 100%;
-
-		@media (max-width:$mobileSmall) {
-			min-width: rem(290);
-		}
-	}
-
-	.swiper {
-		@media (max-width:$pc) {
-			overflow: visible;
-		}
-	}
+  .swiper {
+    @media (max-width: $pc) {
+      overflow: visible;
+    }
+  }
 }
 
 //===============================================================================
 .proposal {
-	@include adaptiveValue("padding-top", 75, 25);
-	@include adaptiveValue("padding-bottom", 75, 25);
+  @include adaptiveValue('padding-top', 75, 25);
+  @include adaptiveValue('padding-bottom', 75, 25);
 
-	&__text {
-		margin-bottom: rem(40);
+  &__text {
+    margin-bottom: rem(40);
 
-		@media (max-width:$mobile) {
-			margin-bottom: rem(30);
-		}
-	}
+    @media (max-width: $mobile) {
+      margin-bottom: rem(30);
+    }
+  }
 }
 
 //===============================================================================
 .instagram {
-	@include adaptiveValue("padding-top", 75, 25);
-	@include adaptiveValue("padding-bottom", 150, 50);
+  @include adaptiveValue('padding-top', 75, 25);
+  @include adaptiveValue('padding-bottom', 150, 50);
 
-	&__title {
-		margin-bottom: rem(40);
-	}
+  &__title {
+    margin-bottom: rem(40);
+  }
 
-	&__list {
-		display: flex;
-		justify-content: start;
+  &__item {
+    max-width: rem(285);
+    height: rem(310);
+    width: 100%;
+  }
 
-		@media (max-width:$mobileSmall) {
-			gap: rem(0);
-		}
-	}
+  &__link {
+    position: relative;
+    display: block;
 
-	&__item {
-		max-width: rem(285);
-		height: rem(310);
-		width: 100%;
-	}
+    svg {
+      position: absolute;
+      top: rem(20);
+      left: rem(20);
+      width: rem(24);
+      height: rem(24);
+    }
 
-	&__link {
-		position: relative;
-		display: block;
+    img {
+      object-fit: cover;
+      height: rem(310);
+    }
 
-		svg {
-			position: absolute;
-			top: rem(20);
-			left: rem(20);
-			width: rem(24);
-			height: rem(24);
-		}
+    &:hover {
+      svg {
+        fill: $yellowColor;
+        transform: scale(1.46);
+      }
+    }
+  }
 
-		img {
-			object-fit: cover;
-			height: rem(310);
-		}
-
-		&:hover {
-			svg {
-				fill: $yellowColor;
-				transform: scale(1.46);
-			}
-		}
-	}
-
-	.swiper {
-		@media (max-width:$tablet) {
-			overflow: visible;
-		}
-	}
+  .swiper {
+    @media (max-width: $tablet) {
+      overflow: visible;
+    }
+  }
 }
 
 //===============================================================================

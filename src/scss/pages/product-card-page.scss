@@ -1,0 +1,205 @@
+.snickers-about {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: rem(20);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: rem(20) rem(0) rem(60) rem(0);
+  }
+
+  &__title {
+    font-family: 'Bookman Old Style';
+    font-style: italic;
+    font-weight: 600;
+    font-size: rem(36);
+    line-height: math.div(42, 36);
+    color: $whiteColor;
+    margin-bottom: rem(20);
+    text-align: center;
+
+    span {
+      color: $yellowColor;
+    }
+
+    &::after {
+      content: '';
+      width: rem(100);
+      height: rem(100);
+      background-image: url('@img/product-card-page/vector.svg');
+      position: absolute;
+
+      @media (max-width: em(650)) {
+        display: none;
+      }
+    }
+  }
+
+  &__desc,
+  &__text {
+    font-weight: 700;
+    text-align: center;
+    color: $whiteColor;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__desc {
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    max-width: rem(320);
+  }
+
+  &__img {
+    margin-bottom: rem(10);
+
+    img {
+      transition: all 0.3s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          transform: scale(1.035);
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    max-width: rem(520);
+
+    span {
+      color: $yellowColor;
+    }
+  }
+}
+
+//===========================================================================
+.snickers-info {
+  @include adaptiveValue('padding-top', 150, 50);
+  @include adaptiveValue('padding-bottom', 75, 25);
+  color: #0b0a0a;
+
+  &__container {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(36);
+    line-height: math.div(48, 36);
+    margin-bottom: rem(40);
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(40);
+    gap: rem(20);
+    @media (max-width: em(1100)) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: $mobileSmall) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__item {
+    max-width: rem(540);
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__headline {
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    text-align: center;
+    margin-bottom: rem(10);
+  }
+
+  &__content {
+    border: 1px solid $blackColor;
+    padding: rem(40) rem(5) rem(40) rem(20);
+    display: grid;
+    row-gap: rem(60);
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    @media (max-width: $mobile) {
+      padding: rem(40) rem(5) rem(40) rem(10);
+    }
+    @media (max-width: $mobileSmall) {
+      row-gap: rem(10);
+      grid-template-columns: 1fr;
+      padding: rem(20) rem(5) rem(20) rem(10);
+    }
+  }
+
+  &__box1 {
+    grid-column: 1/4;
+  }
+
+  &__nutrient {
+    font-weight: 700;
+    color: $blackColor;
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__nutrient-amount {
+    font-weight: 400;
+    margin-left: rem(20);
+  }
+
+  &__box2 {
+    margin-right: rem(20);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: span 2;
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
+      :nth-child(4) {
+        grid-row: 2;
+      }
+      :nth-child(5) {
+        grid-row: 4;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+}
+
+//===================================================================
+
+.similar-product {
+  @include adaptiveValue('padding-top', 75, 25);
+  @include adaptiveValue('padding-bottom', 150, 50);
+
+  &__title {
+    margin-bottom: rem(40);
+  }
+
+  .product-card__link {
+    @media (max-width: $mobile) {
+      width: fit-content;
+    }
+  }
+  .swiper {
+    @media (max-width: $pc) {
+      overflow: visible;
+    }
+  }
+}
