@@ -1,0 +1,13 @@
+.show-more-open {
+  ._showmore-active & {
+    display: none;
+  }
+}
+
+.show-more-hide {
+  display: none;
+
+  ._showmore-active & {
+    display: block;
+  }
+}

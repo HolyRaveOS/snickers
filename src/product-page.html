@@ -1,297 +1,220 @@
 <!DOCTYPE html>
 <html lang="uk">
-  @@include('html/_head.htm',{ "title":"HomePage" })
+@@include('html/_head.htm',{ "title":"HomePage" })
 
-  <body class="product-page-script">
-    <div class="wrapper">
-      @@include('html/_header.htm',{})
-      <main class="page">
-        <section
-          class="feel"
-          style="background-image: url('img/product-page/bg.jpg')"
-        >
-          <div class="feel__container">
-            <div class="breadcrumbs">
-              <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                  <a class="breadcrumbs__link" href="./index.html"> Головна </a>
-                </li>
-                <li class="breadcrumbs__item">
-                  <span class="breadcrumbs__link breadcrumbs__link_active">
-                    Продукція
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div class="feel__content">
-              <h1 class="feel__title title-big">
-                Відчуй <span>задоволення</span> в кожному шматочку!
-              </h1>
-              <p class="feel__text">
-                Погрузись у смачну подорож з нашим асортиментом!
-              </p>
-            </div>
-          </div>
-        </section>
-        <section class="assortment">
-          <div class="assortment__container">
-            <h2 class="assortment__title title">Наш асортимент</h2>
-            <div data-showmore="items" class="assortment__block">
-              <ul
-                id="showmore-list"
-                data-showmore-content="2"
-                class="assortment__list"
-              >
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/1.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">
-                        SNICKERS З КРЕМ-ПАСТОЮ З АРАХІСУ
-                      </h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/2.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">
-                        SNICKERS З АРАХІСОВОЮ ПАСТОЮ X-3
-                      </h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/3.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">SNICKERS®</h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/4.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">SNICKERS® MINIS</h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/5.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">SNICKERS® SUPER+1</h3>
-                      <a
-                        class="product-card__link btn btn--min"
-                        href="./snickers-super+1-page.html"
-                      >
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/6.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">МОРОЗИВО SNICKERS®</h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/7.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">
-                        Снікерс Peanut Brownie Squares
-                      </h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/8.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">
-                        Батончик Snickers Almond з мигдалем
-                      </h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/1.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">
-                        SNICKERS З КРЕМ-ПАСТОЮ З АРАХІСУ
-                      </h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/2.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">
-                        SNICKERS З АРАХІСОВОЮ ПАСТОЮ X3
-                      </h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/3.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">SNICKERS®</h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-                <li class="assortment__item">
-                  <article class="product-card">
-                    <div class="product-card__top">
-                      <img
-                        src="@img/product-card/4.png"
-                        alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ"
-                      />
-                    </div>
-                    <div class="product-card__bottom">
-                      <h3 class="product-card__title">SNICKERS® MINIS</h3>
-                      <a class="product-card__link btn btn--min" href="#">
-                        Детальніше
-                      </a>
-                    </div>
-                  </article>
-                </li>
-              </ul>
-              <button
-                hidden
-                data-showmore-button
-                type="button"
-                class="assortment__more-btn btn"
-              >
-                <span class="assortment__show">Побачити більше</span>
-                <span class="assortment__hide">Приховати</span>
-              </button>
-            </div>
-          </div>
-        </section>
-        <section class="our-history">
-          <div class="our-history__container">
-            <div class="our-history__image">
-              <img
-                class="our-history__img"
-                src="@img/product-page/our-history.jpg"
-                alt="Група друзів дивляться на упаковку снікерс"
-              />
-            </div>
-            <div class="our-history__content">
-              <h2 data-da=".our-history,992,0" class="our-history__title title">
-                Наша історія
-              </h2>
-              <p data-da=".our-history,768,1" class="our-history__text text">
-                Поки ти кайфуєш від результатів нашої багаторічної роботи, можеш
-                почитати про найголовніші події в історії SNICKERS®
-              </p>
-              <a
-                data-da=".our-history,768,3"
-                class="our-history__link btn"
-                href="#"
-              >
-                Перейти
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      @@include('html/_footer.htm',{})
-    </div>
-    @@include('html/_js.htm',{})
-  </body>
+<body class="product-page-script">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="feel" style="background-image: url('img/product-page/bg.jpg')">
+				<div class="feel__container">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a class="breadcrumbs__link" href="./index.html"> Головна </a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__link breadcrumbs__link_active"> Продукція </span>
+							</li>
+						</ul>
+					</div>
+					<div class="feel__content">
+						<h1 class="feel__title title-big">
+							Відчуй <span>задоволення</span> в кожному шматочку!
+						</h1>
+						<p class="feel__text">Погрузись у смачну подорож з нашим асортиментом!</p>
+					</div>
+				</div>
+			</section>
+			<section class="assortment">
+				<div class="assortment__container">
+					<h2 class="assortment__title title">Наш асортимент</h2>
+					<div data-showmore="items" class="assortment__block">
+						<ul id="showmore-list" data-showmore-content="2" class="assortment__list">
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/1.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS З КРЕМ-ПАСТОЮ З АРАХІСУ</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/2.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS З АРАХІСОВОЮ ПАСТОЮ X-3</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/3.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS®</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/4.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS® MINIS</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/5.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS® SUPER+1</h3>
+										<a class="product-card__link btn btn--min" href="./snickers-super+1-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/6.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">МОРОЗИВО SNICKERS®</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/7.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">Снікерс Peanut Brownie Squares</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/8.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">Батончик Snickers Almond з мигдалем</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/1.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS З КРЕМ-ПАСТОЮ З АРАХІСУ</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/2.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS З АРАХІСОВОЮ ПАСТОЮ X3</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/3.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS®</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+							<li class="assortment__item">
+								<article class="product-card">
+									<div class="product-card__top">
+										<img src="@img/product-card/4.png" alt="Снікерс З КРЕМ-ПАСТОЮ З АРАХІСУ">
+									</div>
+									<div class="product-card__bottom">
+										<h3 class="product-card__title">SNICKERS® MINIS</h3>
+										<a class="product-card__link btn btn--min" href="./product-card-page.html">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</li>
+						</ul>
+						<button hidden data-showmore-button type="button" class="assortment__more-btn btn">
+							<span class="show-more-open">Побачити більше</span>
+							<span class="hide-more-hide">Приховати</span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="our-history">
+				<div class="our-history__container">
+					<div class="our-history__image">
+						<img class="our-history__img" src="@img/product-page/our-history.jpg"
+							alt="Група друзів дивляться на упаковку снікерс">
+					</div>
+					<div class="our-history__content">
+						<h2 data-da=".our-history,992,0" class="our-history__title title">Наша історія</h2>
+						<p data-da=".our-history,768,1" class="our-history__text text">
+							Поки ти кайфуєш від результатів нашої багаторічної роботи, можеш почитати про
+							найголовніші події в історії SNICKERS®
+						</p>
+						<a data-da=".our-history,768,3" class="our-history__link btn" href="#"> Перейти </a>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

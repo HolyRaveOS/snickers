@@ -87,15 +87,15 @@
   @include adaptiveValue('padding-bottom', 75, 25);
   color: #0b0a0a;
 
-  &__container {
-  }
-
   &__title {
     font-weight: 700;
     font-size: rem(36);
     line-height: math.div(48, 36);
     margin-bottom: rem(40);
     text-align: center;
+    @media (max-width: $mobile) {
+      margin-bottom: rem(30);
+    }
   }
 
   &__wrapper {
@@ -190,6 +190,9 @@
 
   &__title {
     margin-bottom: rem(40);
+    @media (max-width: $mobile) {
+      margin-bottom: rem(30);
+    }
   }
 
   .product-card__link {
