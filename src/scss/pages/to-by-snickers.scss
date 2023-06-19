@@ -151,6 +151,7 @@
     height: rem(70);
     width: 100%;
     margin: 0 auto;
+    background-color: transparent;
     &::placeholder {
       text-align: center;
       transition: opacity 0.3s;
@@ -285,7 +286,12 @@
   &__address {
     font-size: rem(12);
   }
-
+  &__link {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
   &__box2 {
     display: flex;
     flex-direction: column;

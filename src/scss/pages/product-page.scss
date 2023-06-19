@@ -63,10 +63,6 @@
     grid-template-columns: repeat(auto-fill, minmax(rem(285), 1fr));
     gap: rem(20);
 
-    @media (max-width: $tablet) {
-      gap: rem(10);
-    }
-
     @media (max-width: em(650)) {
       grid-template-columns: repeat(auto-fill, minmax(rem(230), 1fr));
 

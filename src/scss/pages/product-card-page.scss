@@ -115,7 +115,6 @@
   &__item {
     max-width: rem(540);
     width: 100%;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -128,12 +127,15 @@
   }
 
   &__content {
+    overflow: hidden;
     border: 1px solid $blackColor;
     padding: rem(40) rem(5) rem(40) rem(20);
     display: grid;
     row-gap: rem(60);
     grid-template-columns: repeat(2, 1fr);
-    height: 100%;
+    @media (min-width: em(1100)) {
+      height: 100%;
+    }
     @media (max-width: $mobile) {
       padding: rem(40) rem(5) rem(40) rem(10);
     }

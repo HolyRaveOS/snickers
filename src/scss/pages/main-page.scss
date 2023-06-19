@@ -146,6 +146,11 @@
         margin-bottom: rem(0);
       }
     }
+    @media (max-width: $mobileSmall) {
+      &:active {
+        color: $mainColor;
+      }
+    }
   }
 
   &__cards {
@@ -512,10 +517,9 @@
 
   &__card-img {
     max-width: rem(240);
-    align-self: center;
-    margin-bottom: rem(40);
     object-fit: contain;
     transition: transform 0.5s;
+    margin: rem(0) auto rem(40) auto;
   }
 
   &__card-bottom {
