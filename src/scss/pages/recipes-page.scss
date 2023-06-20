@@ -1,0 +1,248 @@
+.recipes-cover {
+  padding-top: rem(20);
+  @include adaptiveValue('padding-bottom', 150, 50);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    padding-top: rem(20);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    max-width: rem(900);
+    width: 100%;
+    margin-left: rem(-105);
+    @include adaptiveValue('margin-left', -105, -10, 1, 1920, 1230);
+    @media (max-width: $pc) {
+      margin-left: 0;
+    }
+  }
+
+  &__info {
+    max-width: rem(400);
+    width: 100%;
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: 'PT Serif';
+    font-weight: 700;
+    font-size: rem(36);
+    line-height: math.div(48, 36);
+    text-align: center;
+    color: $blackColor;
+    margin-bottom: rem(70);
+    @media (max-width: $pc) {
+      margin-bottom: rem(45);
+    }
+    @media (max-width: $tablet) {
+      max-width: rem(400);
+      width: 100%;
+      margin-bottom: rem(0);
+    }
+    @media (max-width: $mobile) {
+      @include adaptiveValue('font-size', 36, 24);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    p {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+      @media (max-width: $pc) {
+        &:not(:last-child) {
+          margin-bottom: rem(10);
+        }
+      }
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(14);
+    }
+  }
+}
+
+//========================================================
+.special-recipe {
+  background-color: $mainColor;
+  &::before {
+    content: '';
+    background-image: url('@img/recipe/rectangle-bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    @include adaptiveValue('height', 160, 40, 1, 1920, 480);
+    position: absolute;
+    @media (min-width: em(1950)) {
+      background-image: none;
+    }
+    @media (max-width: $mobileSmall) {
+      height: rem(40);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: rem(60) rem(0) rem(40) rem(0);
+    justify-content: space-between;
+    gap: rem(50);
+    @media (max-width: $tablet) {
+      gap: rem(20);
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: rem(0);
+    }
+  }
+
+  &__content {
+    max-width: rem(250);
+    width: 100%;
+    text-align: center;
+    margin-left: rem(100);
+    @media (max-width: $pc) {
+      margin-left: rem(50);
+    }
+    @media (max-width: $tablet) {
+      margin-left: rem(0);
+    }
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    color: $yellowColor;
+    &::after {
+      width: rem(110);
+    }
+  }
+
+  &__text {
+    font-family: 'PT Serif';
+
+    font-size: rem(36);
+    line-height: math.div(43, 36);
+    color: $whiteColor;
+    margin-bottom: rem(40);
+    span {
+      font-size: rem(40);
+      font-weight: 700;
+      line-height: math.div(48, 40);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(24);
+      margin-bottom: rem(30);
+      span {
+        font-size: rem(36);
+      }
+    }
+  }
+
+  &__link {
+    background-color: $blueColor;
+    color: $whiteColor;
+    transition: all 0.3s;
+    @media (max-width: $mobile) {
+      margin: 0 auto;
+      display: block;
+      width: fit-content;
+    }
+    &:hover {
+      &:hover {
+        background-color: #1a0066;
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 rem(10) $blueColor;
+        background-color: transparent;
+        color: $whiteColor;
+      }
+    }
+  }
+
+  &__img {
+    img {
+      max-width: rem(720);
+      width: 100%;
+    }
+    @media (max-width: $pc) {
+      margin-right: rem(-15);
+    }
+    @media (max-width: em(1100)) {
+      margin-right: rem(-100);
+    }
+    @media (max-width: $tablet) {
+      margin-right: rem(-150);
+    }
+    @media (max-width: $mobile) {
+      margin: rem(0) rem(-15) rem(30) rem(-15);
+    }
+  }
+}
+
+//===========================================================
+.all-recipes {
+  @include adaptiveValue('padding-top', 150, 50);
+  @include adaptiveValue('padding-bottom', 150, 50);
+
+  &__title {
+    &::after {
+      max-width: rem(110);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+    @media (max-width: em(1100)) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+    @media (max-width: $mobile) {
+      column-gap: rem(10);
+      margin: rem(0) rem(-5) rem(0) rem(-5);
+    }
+    @media (max-width: em(650)) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    max-width: rem(385);
+    width: 100%;
+  }
+  &__btn {
+    background-color: $violetColor;
+    color: $whiteColor;
+    transition: all 0.3s;
+    margin: 0 auto;
+    display: block;
+    margin-top: rem(40);
+    position: relative;
+    transition: all 0.3s;
+    width: rem(260);
+
+    &:hover {
+      background-color: #390f53;
+    }
+
+    &:active {
+      box-shadow: inset 0 0 0 rem(10) $violetColor;
+      background-color: transparent;
+      color: $violetColor;
+    }
+  }
+}

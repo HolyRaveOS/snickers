@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/_head.htm',{ "title":"HomePage" })
+
+<body class="recipes-page-script">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="recipes-cover">
+				<div class="recipes-cover__container">
+					<div class="breadcrumbs breadcrumbs--md">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a class="breadcrumbs__link" href="./index.html"> Головна </a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__link breadcrumbs__link_active">
+									Рецепти
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="recipes-cover__content">
+						<div class="recipes-cover__img">
+							<img src="@img/recipe/group1.png" alt="Фото снікерс чізкейк і кекси снікерс">
+						</div>
+						<div class="recipes-cover__info">
+							<h1 data-da=".recipes-cover__content,991,0" class="recipes-cover__title">
+								Смачні рецепти для вашого задоволення!
+							</h1>
+							<div class="recipes-cover__text">
+								<p>
+									Дивіться, як створити неймовірно смачні страви за допомогою наших простих рецептів.
+								</p>
+								<p>
+									Здивуйте близьких своїм кулінарним майстерством.
+								</p>
+								<p>
+									Незалежно від вашого досвіду в готуванні, ці рецепти допоможуть вам зробити справжні шедеври на кухні.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="special-recipe">
+				<div class="special-recipe__container">
+					<div class="special-recipe__wrapper">
+						<div class="special-recipe__content">
+							<h2 class="special-recipe__title title">
+								Особливий рецепт
+							</h2>
+							<p class="special-recipe__text">
+								Чизкейки <span>SNICKERS </span>
+								у формочках.
+							</p>
+							<a data-da=".special-recipe__wrapper,768" class="special-recipe__link btn" href="#">
+								Детальніше
+							</a>
+						</div>
+						<div class="special-recipe__img">
+							<img src="@img/recipe/image1.jpg" alt="Чизкейки у формочках">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="all-recipes">
+				<div class="all-recipes__container">
+					<h2 class="all-recipes__title title">
+						Усі рецепти
+					</h2>
+					<div data-showmore="items" class="all-recipes__wrapper">
+						<ul id="all-recipes-list" data-showmore-content="2" class="all-recipes__list">
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/1.jpg"
+										alt="Печиво SNICKERS із криваво червоними тріщинками.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Печиво SNICKERS із криваво червоними тріщинками.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">25 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">12 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/2.jpg"
+										alt="Печиво SNICKERS із криваво червоними тріщинками.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Печиво SNICKERS із криваво червоними тріщинками.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">20 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">7 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/3.jpg"
+										alt="Печиво SNICKERS із криваво червоними тріщинками.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Печиво SNICKERS із криваво червоними тріщинками.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">40 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">14 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/4.jpg" alt="Тістечка SNICKERS з арахісовою пастою.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Тістечка SNICKERS з арахісовою пастою.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">15 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">11 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/5.jpg" alt="Торт-морозиво мурашник SNICKERS">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Торт-морозиво "мурашник" SNICKERS
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">30 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">8 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/6.jpg"
+										alt="Печиво SNICKERS із криваво червоними тріщинками.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											МІНІ-ПИРОГИ З АРАХІСОВИМ МАСЛОМ SNICKERS.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">15 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">11 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/1.jpg"
+										alt="Печиво SNICKERS із криваво червоними тріщинками.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Печиво SNICKERS із криваво червоними тріщинками.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">25 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">12 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/2.jpg"
+										alt="Печиво SNICKERS із криваво червоними тріщинками.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Печиво SNICKERS із криваво червоними тріщинками.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">20 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">7 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/3.jpg"
+										alt="Печиво SNICKERS із криваво червоними тріщинками.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Печиво SNICKERS із криваво червоними тріщинками.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">40 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">14 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/4.jpg" alt="Тістечка SNICKERS з арахісовою пастою.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Тістечка SNICKERS з арахісовою пастою.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">15 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">11 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/5.jpg" alt="Торт-морозиво мурашник SNICKERS">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											Торт-морозиво "мурашник" SNICKERS
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">30 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">8 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+							<li class="all-recipes__item">
+								<article class="recipe-card">
+									<img class="recipe-card__img" src="@img/recipe/6.jpg"
+										alt="Печиво SNICKERS із криваво червоними тріщинками.">
+									<div class="recipe-card__content">
+										<h3 class="recipe-card__title">
+											МІНІ-ПИРОГИ З АРАХІСОВИМ МАСЛОМ SNICKERS.
+										</h3>
+										<div class="recipe-card__time">
+											<span class="recipe-card__time-text">Час приготування</span>
+											<span class="recipe-card__time-num">15 хвилин</span>
+										</div>
+										<div class="recipe-card__ingredients">
+											<span class="recipe-card__ingredients-text">Інгредієнти</span>
+											<div class="recipe-card__ingredients-num">11 шт.</div>
+										</div>
+									</div>
+									<a class="recipe-card__link btn" href="#">
+										Детальніше
+									</a>
+								</article>
+							</li>
+						</ul>
+						<button hidden data-showmore-button="1000" class="all-recipes__btn btn">
+							<span class="show-more-open">Побачити більше</span>
+							<span class="show-more-hide">Приховати</span>
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

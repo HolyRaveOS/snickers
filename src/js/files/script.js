@@ -41,19 +41,43 @@ chooseItems.forEach((item) => {
   })
 })
 
-if (document.body.classList.contains('product-page-script')) {
+if (document.body.classList.contains('product-page-script,recipes-page-script')) {
   // Функція, яка буде виконуватись при зміні розміру вікна
   function checkWindowSize() {
     // Отримуємо ширину екрану
     var windowWidth = window.innerWidth
 
     // Отримуємо елемент, на якому потрібно змінити значення атрибуту
-    var element = document.getElementById('showmore-list') // Замініть "your-element-id" на фактичний ідентифікатор вашого елемента
+    var element = document.getElementById('showmore-list,all-recipes-list') // Замініть "your-element-id" на фактичний ідентифікатор вашого елемента
 
     // Перевіряємо ширину екрану та змінюємо значення атрибуту "data-showmore-content"
     if (windowWidth <= 904 && windowWidth > 479) {
       element.setAttribute('data-showmore-content', '3')
     } else if (windowWidth <= 479) element.setAttribute('data-showmore-content', '4')
+    else if (windowWidth > 904) {
+      element.setAttribute('data-showmore-content', '2')
+    }
+  }
+
+  // Додаємо обробник події зміни розміру вікна
+  window.addEventListener('resize', checkWindowSize)
+
+  // Викликаємо функцію при завантаженні сторінки (якщо потрібно перевірити ширину екрану відразу)
+  checkWindowSize()
+}
+if (document.body.classList.contains('recipes-page-script')) {
+  // Функція, яка буде виконуватись при зміні розміру вікна
+  function checkWindowSize() {
+    // Отримуємо ширину екрану
+    var windowWidth = window.innerWidth
+
+    // Отримуємо елемент, на якому потрібно змінити значення атрибуту
+    var element = document.getElementById('all-recipes-list') // Замініть "your-element-id" на фактичний ідентифікатор вашого елемента
+
+    // Перевіряємо ширину екрану та змінюємо значення атрибуту "data-showmore-content"
+    if (windowWidth <= 1100 && windowWidth > 650) {
+      element.setAttribute('data-showmore-content', '3')
+    } else if (windowWidth <= 650) element.setAttribute('data-showmore-content', '4')
     else if (windowWidth > 904) {
       element.setAttribute('data-showmore-content', '2')
     }
