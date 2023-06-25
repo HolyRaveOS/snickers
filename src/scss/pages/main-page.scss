@@ -716,18 +716,6 @@
 }
 
 //===============================================================================
-.proposal {
-  @include adaptiveValue('padding-top', 75, 25);
-  @include adaptiveValue('padding-bottom', 75, 25);
-
-  &__text {
-    margin-bottom: rem(40);
-
-    @media (max-width: $mobile) {
-      margin-bottom: rem(30);
-    }
-  }
-}
 
 //===============================================================================
 .instagram {
