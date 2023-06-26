@@ -1,12 +1,12 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 main {
-  padding-top: rem(140);
+  padding-top: rem(139);
   @media (max-width: $mobile) {
-    padding-top: rem(105);
+    padding-top: rem(104);
   }
   @media (max-width: $mobileSmall) {
-    padding-top: rem(90);
+    padding-top: rem(89);
   }
 }
 
