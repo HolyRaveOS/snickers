@@ -1,0 +1,183 @@
+.feedback-page {
+  .proposal {
+    @include adaptiveValue('padding-bottom', 150, 50);
+    .form {
+      @media (max-width: $mobile) {
+        max-width: rem(390);
+        width: 100%;
+      }
+    }
+  }
+}
+.feedback-hero {
+  z-index: 0;
+  .breadcrumbs {
+    z-index: 1;
+    position: relative;
+    padding-top: rem(20);
+  }
+  position: relative;
+  background-color: $orange1Color;
+  @media (max-width: $tablet) {
+    background-color: $whiteColor;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding-right: rem(15);
+    width: 100%;
+    @media (min-width: em(1930)) {
+      justify-content: center;
+      padding-bottom: rem(40);
+    }
+    @media (max-width: $tablet) {
+      padding: 0;
+    }
+  }
+  &__img {
+    margin: rem(-64) rem(0) rem(-18) 0;
+    @include adaptiveValue('margin-left', 0, -200, 1, 1600, 992);
+    @include adaptiveValue('margin-right', 200, 0, 1, 1924, 1600);
+    max-width: rem(840);
+    width: 100%;
+    @media (min-width: em(1930)) {
+      display: none;
+    }
+    @media (max-width: $tablet) {
+      margin: rem(-44) 0 0 0;
+      max-width: 100%;
+      img {
+        object-fit: cover;
+        min-width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    max-width: rem(500);
+    width: 100%;
+    text-align: center;
+    color: $blackColor;
+    margin-top: rem(-50);
+    @media (max-width: $tablet) {
+      max-width: 100%;
+      padding: rem(0) rem(15) rem(0) rem(15);
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-size: rem(60);
+    font-family: 'Bookman Old Style';
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: rem(20);
+    span {
+      margin-left: rem(8);
+    }
+    @include adaptiveValue('font-size', 60, 36, 1, 768, 480);
+    @media (max-width: $mobileSmall) {
+      font-size: rem(36);
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__text {
+    font-size: rem(20);
+    @media (max-width: $mobile) {
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(18);
+    }
+  }
+}
+
+//==========================================================================
+.answers {
+  @include adaptiveValue('padding-top', 150, 50);
+  @include adaptiveValue('padding-bottom', 75, 25);
+  &__container {
+    color: $blackColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: rem(36);
+    font-family: 'PT Serif';
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: rem(40);
+    @media (max-width: $mobile) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__spollers {
+    max-width: rem(590);
+    width: 100%;
+  }
+}
+.spollers {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__title {
+    font-size: rem(16);
+    list-style-type: none;
+    padding-bottom: rem(10);
+    border-bottom: 1px solid $blackColor;
+    margin-bottom: rem(5);
+    position: relative;
+    @media (max-width: $mobile) {
+      margin-right: rem(40);
+    }
+    &._spoller-active {
+      span {
+        &::before {
+          display: none;
+        }
+        &::after {
+          background-color: $blackColor;
+        }
+      }
+    }
+    span {
+      width: rem(24);
+      height: rem(24);
+      border: 1px solid $blackColor;
+      position: absolute;
+      right: rem(-50);
+      bottom: rem(-2);
+      cursor: pointer;
+      @media (max-width: $mobile) {
+        right: rem(-40);
+      }
+      &::after,
+      &::before {
+        content: '';
+        height: rem(2);
+        width: rem(14);
+        background-color: $redColor;
+        position: absolute;
+        left: rem(5);
+        top: rem(11);
+        border-radius: rem(2);
+      }
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__body {
+  }
+
+  &__text {
+    font-size: rem(14);
+  }
+}

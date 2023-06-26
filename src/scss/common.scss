@@ -1,5 +1,15 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
+main {
+  padding-top: rem(140);
+  @media (max-width: $mobile) {
+    padding-top: rem(105);
+  }
+  @media (max-width: $mobileSmall) {
+    padding-top: rem(90);
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

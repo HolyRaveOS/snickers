@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
+  margin-top: rem(-1);
   &__container {
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,6 @@
     position: absolute;
     top: -31%;
     right: -26%;
-
     @media (max-width: $pc) {
       right: -17%;
       top: -26%;
@@ -56,13 +55,14 @@
     }
 
     @media (max-width: em(870)) {
-      top: -10%;
+      top: 0;
       left: 40%;
     }
 
     @media (max-width: $mobile) {
       right: -17%;
-      top: -10%;
+      left: 30%;
+      top: 10%;
     }
 
     @media (max-width: $mobileSmall) {

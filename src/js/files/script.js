@@ -246,3 +246,20 @@ function initMap() {
 }
 
 window.initMap = initMap
+
+if (document.body.classList.contains('feedback-script')) {
+  // Отримуємо посилання на елемент з класом "breadcrumbs"
+  const breadcrumbsElement = document.querySelector('.breadcrumbs')
+
+  // Функція для перевірки розміру екрану та видалення класу "breadcrumbs--md"
+  function checkScreenSize() {
+    if (window.innerWidth < 991) {
+      breadcrumbsElement.classList.remove('breadcrumbs--md')
+    } else {
+      breadcrumbsElement.classList.add('breadcrumbs--md')
+    }
+  }
+
+  window.addEventListener('load', checkScreenSize)
+  window.addEventListener('resize', checkScreenSize)
+}
