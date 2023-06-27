@@ -1,12 +1,27 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 main {
+  position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    height: rem(139);
+    background-color: $mainColor;
+    position: absolute;
+    top: 0;
+  }
   padding-top: rem(139);
   @media (max-width: $mobile) {
     padding-top: rem(104);
+    &::before {
+      height: rem(104);
+    }
   }
   @media (max-width: $mobileSmall) {
     padding-top: rem(89);
+    &::before {
+      height: rem(89);
+    }
   }
 }
 

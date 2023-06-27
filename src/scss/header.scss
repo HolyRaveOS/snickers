@@ -12,6 +12,7 @@
   z-index: 100;
   transition: all 0.3s;
   &._header-scroll {
+    background-color: rgb(65, 12, 0, 0.9);
     @media (min-width: $mobile) {
       min-height: rem(105);
       padding: rem(20) 0;
@@ -107,7 +108,6 @@
   padding: rem(5);
   overflow: hidden;
   border-radius: rem(10);
-
   @media (max-width: $mobile) {
     margin-right: rem(100);
   }
@@ -135,7 +135,6 @@
     right: rem(55);
     transform: scale(0);
     z-index: 6;
-
     @media (max-width: $mobileSmall) {
       display: none;
 
@@ -160,6 +159,9 @@
   }
 
   &__label {
+    @media (min-width: $mobile) {
+      min-width: rem(280);
+    }
     ::placeholder {
       color: $whiteColor;
     }
@@ -175,7 +177,10 @@
   &__input {
     padding: 10px;
     outline: none;
-
+    @media (min-width: $mobile) {
+      max-width: rem(280);
+      width: 100%;
+    }
     @media (max-width: $mobileSmall) {
       background-color: transparent;
       color: $whiteColor;
