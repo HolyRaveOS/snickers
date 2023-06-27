@@ -41,14 +41,14 @@ chooseItems.forEach((item) => {
   })
 })
 
-if (document.body.classList.contains('product-page-script,recipes-page-script')) {
+if (document.body.classList.contains('product-page-script')) {
   // Функція, яка буде виконуватись при зміні розміру вікна
   function checkWindowSize() {
     // Отримуємо ширину екрану
     var windowWidth = window.innerWidth
 
     // Отримуємо елемент, на якому потрібно змінити значення атрибуту
-    var element = document.getElementById('showmore-list,all-recipes-list') // Замініть "your-element-id" на фактичний ідентифікатор вашого елемента
+    var element = document.getElementById('showmore-list') // Замініть "your-element-id" на фактичний ідентифікатор вашого елемента
 
     // Перевіряємо ширину екрану та змінюємо значення атрибуту "data-showmore-content"
     if (windowWidth <= 904 && windowWidth > 479) {
@@ -246,20 +246,3 @@ function initMap() {
 }
 
 window.initMap = initMap
-
-if (document.body.classList.contains('feedback-script')) {
-  // Отримуємо посилання на елемент з класом "breadcrumbs"
-  const breadcrumbsElement = document.querySelector('.breadcrumbs')
-
-  // Функція для перевірки розміру екрану та видалення класу "breadcrumbs--md"
-  function checkScreenSize() {
-    if (window.innerWidth < 991) {
-      breadcrumbsElement.classList.remove('breadcrumbs--md')
-    } else {
-      breadcrumbsElement.classList.add('breadcrumbs--md')
-    }
-  }
-
-  window.addEventListener('load', checkScreenSize)
-  window.addEventListener('resize', checkScreenSize)
-}
