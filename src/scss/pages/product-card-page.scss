@@ -2,8 +2,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @include adaptiveValue('padding-top', 20, 20);
-  @include adaptiveValue('padding-bottom', 0, 0);
+  padding-top: rem(20);
   &__wrapper {
     display: flex;
     align-items: center;
@@ -84,6 +83,7 @@
 //===========================================================================
 .snickers-info {
   @include adaptiveValue('padding-top', $big-padding, $small-padding);
+  @include adaptiveValue('padding-bottom', calc($big-padding/2), calc($small-padding/2));
   color: #0b0a0a;
 
   &__title {
@@ -195,6 +195,8 @@
 //===================================================================
 
 .similar-product {
+  @include adaptiveValue('padding-top', calc($big-padding/2), calc($small-padding/2));
+
   @include adaptiveValue('padding-bottom', $big-padding, $small-padding);
 
   &__title {

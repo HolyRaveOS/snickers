@@ -11,8 +11,6 @@
 }
 
 .feedback-hero {
-  @include adaptiveValue('padding-top', 0, 0);
-  @include adaptiveValue('padding-bottom', 0, 0);
   z-index: 0;
 
   .breadcrumbs {
@@ -105,6 +103,8 @@
 //==========================================================================
 .answers {
   @include adaptiveValue('padding-top', $big-padding, $small-padding);
+  @include adaptiveValue('padding-bottom', calc($big-padding/2), calc($small-padding/2));
+
   &__container {
     color: $blackColor;
     display: flex;

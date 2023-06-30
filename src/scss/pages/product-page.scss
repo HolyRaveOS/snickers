@@ -3,8 +3,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  @include adaptiveValue('padding-top', 0, 0);
-  @include adaptiveValue('padding-bottom', 0, 0);
+
   @media (max-width: $tablet) {
     &::before {
       content: '';
@@ -50,7 +49,7 @@
 //===================================================================
 .assortment {
   @include adaptiveValue('padding-top', $big-padding, $small-padding);
-
+  @include adaptiveValue('padding-bottom', calc($big-padding/2), calc($small-padding/2));
   &__title {
     margin-bottom: rem(40);
     @media (max-width: $mobile) {
@@ -83,6 +82,8 @@
 
 //===================================================================
 .our-history {
+  @include adaptiveValue('padding-top', calc($big-padding/2), calc($small-padding/2));
+
   @include adaptiveValue('padding-bottom', $big-padding, $small-padding);
 
   &__container {

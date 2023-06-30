@@ -1,5 +1,5 @@
 .where {
-  @include adaptiveValue('padding-top', 20, 20);
+  padding-top: rem(20);
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -74,6 +74,10 @@
 
 //============================================================
 .partners {
+  @include adaptiveValue('padding-top', calc($big-padding/2), calc($small-padding/2));
+
+  @include adaptiveValue('padding-bottom', calc($big-padding/2), calc($small-padding/2));
+
   &__title {
     margin-bottom: rem(40);
     @media (max-width: $mobile) {
@@ -109,6 +113,8 @@
 }
 //=============================================================
 .location {
+  @include adaptiveValue('padding-top', calc($big-padding/2), calc($small-padding/2));
+
   @include adaptiveValue('padding-bottom', $big-padding, $small-padding);
 
   &__container {

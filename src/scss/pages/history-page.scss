@@ -1,6 +1,6 @@
 .history {
-  @include adaptiveValue('padding-top', 20, 20);
-  @include adaptiveValue('padding-bottom', 10, 10);
+  padding-top: rem(20);
+  padding-bottom: rem(10);
   position: relative;
   background-color: $brown2Color;
 

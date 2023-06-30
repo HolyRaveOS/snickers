@@ -1,5 +1,5 @@
 .recipes-cover {
-  @include adaptiveValue('padding-top', 20, 20);
+  padding-top: rem(20);
   @include adaptiveValue('padding-bottom', $big-padding, $small-padding);
 
   &__content {
@@ -77,8 +77,6 @@
 
 //========================================================
 .special-recipe {
-  @include adaptiveValue('padding-top', 0, 0);
-  @include adaptiveValue('padding-bottom', 0, 0);
   background-color: $mainColor;
   &::before {
     content: '';

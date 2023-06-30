@@ -41,11 +41,9 @@ main {
   }
 }
 
-.section {
-  @include adaptiveValue('padding-top', calc($big-padding/2), calc($small-padding/2));
+// .section {
 
-  @include adaptiveValue('padding-bottom', calc($big-padding/2), calc($small-padding/2));
-}
+// }
 
 .logo {
   transition: transform 0.3s;

@@ -1,7 +1,10 @@
 /** @format */
 
 .recipe-section {
-  @include adaptiveValue('padding-top', 20, 20);
+  padding-top: rem(20);
+
+  @include adaptiveValue('padding-bottom', calc($big-padding/2), calc($small-padding/2));
+
   &__title {
     padding-top: rem(25);
     font-family: 'PT Serif';
@@ -294,6 +297,8 @@
 
 //===================================================================
 .more-recipes {
+  @include adaptiveValue('padding-top', calc($big-padding/2), calc($small-padding/2));
+
   @include adaptiveValue('padding-bottom', $big-padding, $small-padding);
 
   &__title {
