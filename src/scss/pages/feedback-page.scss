@@ -1,6 +1,6 @@
 .feedback-page {
   .proposal {
-    @include adaptiveValue('padding-bottom', 150, 50);
+    @include adaptiveValue('padding-bottom', $big-padding, $small-padding);
     .form {
       @media (max-width: $mobile) {
         max-width: rem(390);
@@ -9,31 +9,39 @@
     }
   }
 }
+
 .feedback-hero {
+  padding: 0;
   z-index: 0;
+
   .breadcrumbs {
     z-index: 1;
     position: relative;
     padding-top: rem(20);
   }
+
   position: relative;
   background-color: $orange1Color;
   @media (max-width: $tablet) {
     background-color: $whiteColor;
   }
+
   &__wrapper {
     display: flex;
     align-items: center;
     padding-right: rem(15);
     width: 100%;
+
     @media (min-width: em(1930)) {
       justify-content: center;
       padding-bottom: rem(40);
     }
+
     @media (max-width: $tablet) {
       padding: 0;
     }
   }
+
   &__img {
     margin: rem(-64) rem(0) rem(-18) 0;
     @include adaptiveValue('margin-left', 0, -200, 1, 1600, 992);
@@ -43,6 +51,7 @@
     @media (min-width: em(1930)) {
       display: none;
     }
+
     @media (max-width: $tablet) {
       margin: rem(-44) 0 0 0;
       max-width: 100%;
@@ -94,8 +103,7 @@
 
 //==========================================================================
 .answers {
-  @include adaptiveValue('padding-top', 150, 50);
-  @include adaptiveValue('padding-bottom', 75, 25);
+  @include adaptiveValue('padding-top', $big-padding, $small-padding);
   &__container {
     color: $blackColor;
     display: flex;
@@ -132,13 +140,16 @@
     &::-webkit-details-marker {
       display: none;
     }
+
     padding-bottom: rem(10);
     border-bottom: 1px solid $blackColor;
     margin-bottom: rem(5);
     position: relative;
+
     @media (max-width: $mobile) {
       margin-right: rem(40);
     }
+
     &._spoller-active {
       span {
         &::before {
@@ -149,6 +160,7 @@
         }
       }
     }
+
     span {
       width: rem(24);
       height: rem(24);

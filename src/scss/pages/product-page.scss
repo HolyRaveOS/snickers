@@ -3,7 +3,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
-
+  padding: 0;
   @media (max-width: $tablet) {
     &::before {
       content: '';
@@ -48,8 +48,7 @@
 
 //===================================================================
 .assortment {
-  @include adaptiveValue('padding-top', 150, 50);
-  @include adaptiveValue('padding-bottom', 75, 25);
+  @include adaptiveValue('padding-top', $big-padding, $small-padding);
 
   &__title {
     margin-bottom: rem(40);
@@ -72,32 +71,18 @@
   }
 
   &__more-btn {
-    background-color: $violetColor;
-    color: $whiteColor;
-    transition: all 0.3s;
     margin: 0 auto;
     display: block;
     margin-top: rem(40);
     position: relative;
     transition: all 0.3s;
     width: rem(260);
-
-    &:hover {
-      background-color: #390f53;
-    }
-
-    &:active {
-      box-shadow: inset 0 0 0 rem(10) $violetColor;
-      background-color: transparent;
-      color: $violetColor;
-    }
   }
 }
 
 //===================================================================
 .our-history {
-  @include adaptiveValue('padding-top', 75, 25);
-  @include adaptiveValue('padding-bottom', 150, 50);
+  @include adaptiveValue('padding-bottom', $big-padding, $small-padding);
 
   &__container {
     display: flex;
@@ -154,26 +139,12 @@
   }
 
   &__link {
-    background-color: $violetColor;
-    color: $whiteColor;
-    transition: all 0.3s;
-
     @media (max-width: $mobile) {
       display: block;
       width: rem(260);
       text-align: center;
       margin: 0 auto;
       margin-top: rem(30);
-    }
-
-    &:hover {
-      background-color: #390f53;
-    }
-
-    &:active {
-      box-shadow: inset 0 0 0 rem(10) $violetColor;
-      background-color: transparent;
-      color: $violetColor;
     }
   }
 }

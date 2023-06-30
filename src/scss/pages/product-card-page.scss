@@ -2,7 +2,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: rem(20);
+  padding: rem(20) rem(0) rem(0) rem(0);
 
   &__wrapper {
     display: flex;
@@ -83,8 +83,7 @@
 
 //===========================================================================
 .snickers-info {
-  @include adaptiveValue('padding-top', 150, 50);
-  @include adaptiveValue('padding-bottom', 75, 25);
+  @include adaptiveValue('padding-top', $big-padding, $small-padding);
   color: #0b0a0a;
 
   &__title {
@@ -93,6 +92,7 @@
     line-height: math.div(48, 36);
     margin-bottom: rem(40);
     text-align: center;
+
     @media (max-width: $mobile) {
       margin-bottom: rem(30);
     }
@@ -103,10 +103,12 @@
     justify-content: space-between;
     margin-bottom: rem(40);
     gap: rem(20);
+
     @media (max-width: em(1100)) {
       flex-direction: column;
       align-items: center;
     }
+
     @media (max-width: $mobileSmall) {
       margin-bottom: rem(20);
     }
@@ -133,12 +135,15 @@
     display: grid;
     row-gap: rem(60);
     grid-template-columns: repeat(2, 1fr);
+
     @media (min-width: em(1100)) {
       height: 100%;
     }
+
     @media (max-width: $mobile) {
       padding: rem(40) rem(5) rem(40) rem(10);
     }
+
     @media (max-width: $mobileSmall) {
       row-gap: rem(10);
       grid-template-columns: 1fr;
@@ -168,11 +173,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column: span 2;
+
     @media (max-width: $mobileSmall) {
       grid-template-columns: 1fr;
+
       :nth-child(4) {
         grid-row: 2;
       }
+
       :nth-child(5) {
         grid-row: 4;
       }
@@ -187,8 +195,7 @@
 //===================================================================
 
 .similar-product {
-  @include adaptiveValue('padding-top', 75, 25);
-  @include adaptiveValue('padding-bottom', 150, 50);
+  @include adaptiveValue('padding-bottom', $big-padding, $small-padding);
 
   &__title {
     margin-bottom: rem(40);
