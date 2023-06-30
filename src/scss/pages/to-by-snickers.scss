@@ -1,6 +1,5 @@
 .where {
-  padding-top: rem(20);
-
+  @include adaptiveValue('padding-top', 20, 20);
   &__wrapper {
     display: flex;
     justify-content: space-between;

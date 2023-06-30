@@ -1,10 +1,13 @@
 //===============================================================================
+
 .hero {
-  padding: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-top: rem(-1);
+  @include adaptiveValue('padding-top', 0, 0);
+  @include adaptiveValue('padding-bottom', 0, 0);
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -276,7 +279,8 @@
 
 //==================================================================================
 .novelty {
-  padding: 0;
+  @include adaptiveValue('padding-top', 0, 0);
+  @include adaptiveValue('padding-bottom', 0, 0);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;

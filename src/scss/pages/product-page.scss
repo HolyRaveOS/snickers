@@ -3,7 +3,8 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  padding: 0;
+  @include adaptiveValue('padding-top', 0, 0);
+  @include adaptiveValue('padding-bottom', 0, 0);
   @media (max-width: $tablet) {
     &::before {
       content: '';

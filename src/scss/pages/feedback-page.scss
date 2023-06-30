@@ -11,7 +11,8 @@
 }
 
 .feedback-hero {
-  padding: 0;
+  @include adaptiveValue('padding-top', 0, 0);
+  @include adaptiveValue('padding-bottom', 0, 0);
   z-index: 0;
 
   .breadcrumbs {
