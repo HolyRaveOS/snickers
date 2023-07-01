@@ -16,12 +16,12 @@
     font-weight: 600;
     font-size: rem(36);
     line-height: math.div(42, 36);
-    color: $whiteColor;
+    color: var(--whiteColor);
     margin-bottom: rem(20);
     text-align: center;
 
     span {
-      color: $yellowColor;
+      color: var(--yellowColor);
     }
 
     &::after {
@@ -41,7 +41,7 @@
   &__text {
     font-weight: 700;
     text-align: center;
-    color: $whiteColor;
+    color: var(--whiteColor);
     width: 100%;
 
     &:not(:last-child) {
@@ -75,7 +75,7 @@
     max-width: rem(520);
 
     span {
-      color: $yellowColor;
+      color: var(--yellowColor);
     }
   }
 }
@@ -130,7 +130,7 @@
 
   &__content {
     overflow: hidden;
-    border: 1px solid $blackColor;
+    border: 1px solid var(--blackColor);
     padding: rem(40) rem(5) rem(40) rem(20);
     display: grid;
     row-gap: rem(60);
@@ -157,7 +157,7 @@
 
   &__nutrient {
     font-weight: 700;
-    color: $blackColor;
+    color: var(--blackColor);
     &:not(:last-child) {
       margin-bottom: rem(10);
     }

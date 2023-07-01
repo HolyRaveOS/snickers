@@ -2,7 +2,7 @@
   padding-top: rem(20);
   padding-bottom: rem(10);
   position: relative;
-  background-color: $brown2Color;
+  background-color: var(--brown2Color);
 
   &__container {
     position: relative;
@@ -22,7 +22,7 @@
   }
 
   &__box {
-    color: $whiteColor;
+    color: var(--whiteColor);
     text-align: center;
     max-width: rem(500);
     width: 100%;
@@ -290,16 +290,16 @@
     font-family: 'Fira Sans';
     font-weight: 700;
     border-radius: 20px 0px;
-    background-color: $mainColor;
-    color: $whiteColor;
+    background-color: var(--main-color);
+    color: var(--whiteColor);
     padding: rem(8) rem(50) rem(8) rem(50);
     margin-bottom: rem(40);
     transition: all 0.3s;
 
     &:hover {
       background-color: transparent;
-      box-shadow: inset 0 0 0 rem(8) $mainColor;
-      color: $blackColor;
+      box-shadow: inset 0 0 0 rem(8) var(--main-color);
+      color: var(--blackColor);
     }
 
     @media (max-width: em(650)) {
@@ -336,7 +336,7 @@
     flex-shrink: 0;
     max-width: rem(350);
     width: 100%;
-    background-color: $mainColor;
+    background-color: var(--main-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -352,15 +352,15 @@
     }
 
     &--black {
-      background-color: $blackColor;
+      background-color: var(--blackColor);
     }
 
     &--red {
-      background-color: $redColor;
+      background-color: var(--redColor);
     }
 
     &--blue {
-      background-color: $blueColor;
+      background-color: var(--blueColor);
     }
 
     img {
@@ -373,25 +373,25 @@
   }
 
   &__date--blue {
-    background-color: $blueColor;
+    background-color: var(--blueColor);
     &:hover {
-      box-shadow: inset 0 0 0 rem(8) $blueColor;
+      box-shadow: inset 0 0 0 rem(8) var(--blueColor);
     }
   }
 
   &__date--red {
-    background-color: $redColor;
+    background-color: var(--redColor);
 
     &:hover {
-      box-shadow: inset 0 0 0 rem(8) $redColor;
+      box-shadow: inset 0 0 0 rem(8) var(--redColor);
     }
   }
 
   &__date--orange {
-    background-color: $orange1Color;
+    background-color: var(--orangeColor);
 
     &:hover {
-      box-shadow: inset 0 0 0 rem(8) $orangeColor;
+      box-shadow: inset 0 0 0 rem(8) var(--orangeColor);
     }
   }
 }

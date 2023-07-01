@@ -237,7 +237,7 @@
       content: '';
       height: rem(1);
       width: 95%;
-      background-color: $blackColor;
+      background-color: var(--blackColor);
       position: absolute;
       bottom: 0;
       transition: background-color 0.3s;
@@ -259,12 +259,12 @@
 
     ._showmore-active & {
       &::after {
-        background-color: $blackColor;
+        background-color: var(--blackColor);
       }
     }
   }
 
-  color: $blackColor;
+  color: var(--blackColor);
 
   @media (max-width: $mobile) {
     padding-bottom: rem(30);
@@ -288,7 +288,7 @@
       content: counter(item);
       z-index: 1;
       position: absolute;
-      color: $whiteColor;
+      color: var(--whiteColor);
       left: rem(12);
       top: rem(10);
     }
@@ -350,8 +350,8 @@
   }
 
   &__btn {
-    background-color: $violetColor;
-    color: $whiteColor;
+    background-color: var(--violetColor);
+    color: var(--whiteColor);
     margin: 0 auto;
     display: block;
   }

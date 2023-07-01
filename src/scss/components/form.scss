@@ -15,14 +15,14 @@
     color: $whiteColor;
     .form__btn {
       &:active {
-        color: $whiteColor;
+        color: var(--whiteColor);
       }
     }
     .form__input,
     .form__textarea {
       border-radius: rem(0);
       background-color: transparent;
-      color: $whiteColor;
+      color: var(--whiteColor);
       border-color: rgba(255, 255, 255, 0.6);
       &::placeholder {
         color: rgba(255, 255, 255, 0.6);

@@ -24,7 +24,7 @@
     font-weight: 700;
     @include adaptiveValue('font-size', 20, 16);
     line-height: 24px;
-    color: $whiteColor;
+    color: var(--whiteColor);
     opacity: 0.6;
 
     &_active {
@@ -33,7 +33,7 @@
   }
   &--md {
     .breadcrumbs__link {
-      color: $mainColor;
+      color: var(--main-color);
     }
     .breadcrumbs__item {
       &::after {

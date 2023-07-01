@@ -111,11 +111,11 @@
         margin-bottom: rem(30);
       }
 
-      color: $blackColor;
+      color: var(--blackColor);
       text-shadow: none;
 
       span {
-        color: $blackColor;
+        color: var(--blackColor);
       }
     }
 
@@ -137,7 +137,7 @@
     }
     @media (max-width: $mobileSmall) {
       &:active {
-        color: $mainColor;
+        color: var(--main-color);
       }
     }
   }
@@ -206,14 +206,14 @@
 
     width: rem(10);
     height: rem(10);
-    background-color: #fff;
+    background-color: var(--whiteColor);
     border-radius: 50%;
   }
 
   .swiper-pagination-bullet-active {
     width: rem(12);
     height: rem(12);
-    background-color: $yellowColor;
+    background-color: var(--yellowColor);
   }
 }
 
@@ -237,7 +237,7 @@
   }
 
   &__item {
-    border: 5px solid $blueColor;
+    border: 5px solid var(--blueColor);
     border-radius: rem(50) 0;
     padding: rem(40) rem(30);
     text-align: center;
@@ -249,12 +249,12 @@
 
     @media (any-hover: hover) {
       &:hover {
-        background-color: $mainColor;
-        color: $whiteColor;
-        border-color: $mainColor;
+        background-color: var(--main-color);
+        color: var(--whiteColor);
+        border-color: var(--main-color);
 
         .advantages__item-title {
-          color: $whiteColor;
+          color: var(--whiteColor);
         }
       }
     }
@@ -264,7 +264,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: $blackColor;
+    color: var(--blackColor);
     margin-bottom: rem(10);
     flex-grow: 1;
     transition: color 0.3s;
@@ -289,7 +289,7 @@
 
   &__title,
   &__text {
-    color: $whiteColor;
+    color: var(--whiteColor);
   }
 
   &__text {
@@ -418,7 +418,7 @@
   }
 
   &__card {
-    border: 5px solid $mainColor;
+    border: 5px solid var(--main-color);
     border-radius: 90px 20px;
     max-width: rem(377);
     width: 100%;
@@ -434,18 +434,18 @@
 
     @media (any-hover: hover) {
       &:hover {
-        background-color: $mainColor;
+        background-color: var(--main-color);
 
         .hit__card-top {
-          background-color: $mainColor;
+          background-color: var(--main-color);
         }
 
         .hit__card-label {
-          border-color: $redColor;
+          border-color: var(--redColor);
         }
 
         .hit__card-title {
-          color: $whiteColor;
+          color: var(--whiteColor);
         }
 
         .hit__card-img {
@@ -453,12 +453,12 @@
         }
 
         .hit__card-link {
-          background-color: $blueColor;
+          background-color: var(--blueColor);
 
           &:active {
-            box-shadow: inset 0 0 0 rem(10) $blueColor;
+            box-shadow: inset 0 0 0 rem(10) var(--blueColor);
             background-color: transparent;
-            color: $whiteColor;
+            color: var(--whiteColor);
           }
         }
       }
@@ -466,7 +466,7 @@
   }
 
   &__card-top {
-    background: $blueColor;
+    background: var(--blueColor);
     border-radius: 84px 14px 90px 20px;
     padding: rem(100) rem(0) rem(0) rem(0);
     display: flex;
@@ -478,8 +478,8 @@
   }
 
   &__card-label {
-    color: $whiteColor;
-    border: 3px solid $yellowColor;
+    color: var(--whiteColor);
+    border: 3px solid var(--yellowColor);
     border-radius: rem(20);
     padding: 0 rem(12);
     width: fit-content;
@@ -507,7 +507,7 @@
   &__card-title {
     font-size: rem(20);
     line-height: math.div(24, 20);
-    color: $blackColor;
+    color: var(--blackColor);
     margin-bottom: rem(40);
     transition: color 0.3s;
     flex-grow: 1;
@@ -573,7 +573,7 @@
         }
 
         .choose__item-text {
-          color: $redColor;
+          color: var(--redColor);
         }
       }
     }
@@ -584,7 +584,7 @@
       content: counter(item);
       font-weight: 700;
       font-size: rem(20);
-      border: 1px solid $blackColor;
+      border: 1px solid var(--blackColor);
       width: rem(30);
       height: rem(30);
       border-radius: 50%;
@@ -625,7 +625,7 @@
   &__checkbox {
     width: rem(60);
     height: rem(60);
-    border: 3px solid $blueColor;
+    border: 3px solid var(--blueColor);
     margin-top: rem(40);
     display: flex;
     justify-content: center;
@@ -725,7 +725,7 @@
 
     &:hover {
       svg {
-        fill: $yellowColor;
+        fill: var(--yellowColor);
         transform: scale(1.46);
       }
     }

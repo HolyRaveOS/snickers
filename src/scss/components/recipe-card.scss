@@ -1,5 +1,5 @@
 .recipe-card {
-  border: 1px solid $yellowColor;
+  border: 1px solid var(--yellowColor);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,19 +9,19 @@
   overflow: hidden;
   @media (any-hover: hover) {
     &:hover {
-      background-color: $mainColor;
-      color: $whiteColor;
+      background-color: var(--main-color);
+      color: var(--whiteColor);
 
       .recipe-card__title {
-        color: $whiteColor;
+        color: var(--whiteColor);
       }
 
       .recipe-card__link {
-        background-color: $violetColor;
-        border-color: $violetColor;
+        background-color: var(--violetColor);
+        border-color: var(--violetColor);
 
         &:active {
-          box-shadow: inset 0 0 0 rem(10) $violetColor;
+          box-shadow: inset 0 0 0 rem(10) var(--violetColor);
           background-color: transparent;
         }
       }
@@ -48,7 +48,7 @@
     font-weight: 700;
     font-size: rem(20);
     line-height: math.div(24, 20);
-    color: $blackColor;
+    color: var(--blackColor);
     margin-bottom: rem(10);
     transition: color 0.3s;
   }
@@ -83,7 +83,7 @@
   }
 
   &__link {
-    border: 2px solid $blueColor;
+    border: 2px solid var(--blueColor);
     margin-bottom: rem(35);
     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
   }

@@ -12,7 +12,7 @@
   }
   // .select__title
   &__title {
-    color: $blackColor;
+    color: var(--blackColor);
     text-align: left;
     border: 1px solid rgb(11, 10, 10, 0.6);
 
@@ -40,7 +40,7 @@
 
   // .select__options
   &__options {
-    border: 1px solid $blackColor;
+    border: 1px solid var(--blackColor);
     border-radius: rem(10);
     margin-top: rem(-1);
   }
@@ -63,7 +63,7 @@
     text-align: left;
     cursor: pointer;
     padding: 3px 15px;
-    color: $blueColor;
+    color: var(--blackColor);
     border-radius: rem(10);
     &:not(:last-child) {
       margin-bottom: rem(5);
@@ -71,8 +71,8 @@
 
     @media (any-hover: hover) {
       &:hover {
-        background: $blueColor;
-        color: $whiteColor;
+        background: var(--blueColor);
+        color: var(--whiteColor);
       }
     }
   }
